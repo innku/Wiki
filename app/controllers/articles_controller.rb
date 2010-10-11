@@ -5,21 +5,7 @@ class ArticlesController < ApplicationController
 
   
   def index
-    
-    options = {
-      
-      
-    }
-    
-    if params[:term]
-      options[:conditions] = [
-        "description LIKE :term",
-        {:term => "%#{params[:term]}%"}
-        ]
-
-    end
-    
-    @articles = Article.find(:all,options)
+    @articles = Article.search(params[:q])
   end
 
   def show
@@ -45,6 +31,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    params[:article][:tag_list] ||= []
     @article = Article.find(params[:id])
     if @article.update_attributes(params[:article])
       redirect_to(@article, :notice => 'Article was successfully updated.')
