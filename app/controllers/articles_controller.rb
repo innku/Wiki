@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   def index
     
     options = {
-      :order => 'name DESC'
+      
       
     }
     
@@ -55,5 +55,6 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
+    redirect_to(@article, :notice => 'Article was successfully deleted.')
   end
 end

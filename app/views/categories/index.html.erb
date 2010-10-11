@@ -14,7 +14,7 @@
     <td><%= link_to 'Show', category %></td>
 	
 	<% if user_signed_in? %>
-		<td><%= link_to 'Edit', edit_category_path(article) %></td>
+		<td><%= link_to 'Edit', edit_category_path(category) %></td>
 		<td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
 	<% end %>  
 </tr>
@@ -24,3 +24,5 @@
 <br />
 
 <%= link_to 'New Category', new_category_path %>
+<%= link_to 'View Articles', articles_path %>
+
