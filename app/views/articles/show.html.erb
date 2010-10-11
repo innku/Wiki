@@ -9,12 +9,12 @@
 
 <p>
   <b>Description:</b>
-  <%= @article.description %>
+  <%= redcloth(@article.description) %>
 </p>
 
 <p>
   <b>Content:</b>
-  <%= @article.content %>
+  <%= redcloth(@article.content) %>
 </p>
 
 <p>
