@@ -7,17 +7,20 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div id="container">
-	<div id="usernav">
-		<% if user_signed_in? %>
-			Signed in as <%= current_user.email %> you? <%= link_to 'Sign out', destroy_user_session_path%>
-		<% else %>
-			Signed in as Guest <%= link_to 'Sign in', new_user_session_path %> or <%= link_to 'Sign up', new_user_registration_path%>
-		<% end %>
-	
+	<div id="sideMenu">
+		
 	</div>
+	<div id="container">
+		<div id="usernav">
+			<% if user_signed_in? %>
+				Signed in as <%= current_user.email %> you? <%= link_to 'Sign out', destroy_user_session_path%>
+			<% else %>
+				Signed in as Guest <%= link_to 'Sign in', new_user_session_path %> or <%= link_to 'Sign up', new_user_registration_path%>
+			<% end %>
 	
-	<%= yield %>
-</div>
+		</div>
+	
+		<%= yield %>
+	</div>
 </body>
 </html>

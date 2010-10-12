@@ -2,6 +2,7 @@ body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+  height:100%;
 }
 
 a img {
@@ -19,7 +20,7 @@ a {
 }
 
 #container {
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
@@ -46,6 +47,18 @@ a {
 #flash_error, #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
+}
+
+#sideMenu{
+	float: left;
+	background-color:#FFFFFF;
+	width:10%;
+	border: solid 1px #000;
+	height:100%;
+}
+
+#article_content{
+	width:700px;
 }
 
 .fieldWithErrors {
