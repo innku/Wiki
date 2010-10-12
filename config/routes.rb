@@ -1,5 +1,7 @@
 Wiki::Application.routes.draw do
   
+  get "home/index"
+
   get 'articles/index'
   
   
@@ -9,7 +11,10 @@ Wiki::Application.routes.draw do
 
   resources :articles
   
+  resources :home
   
+  root :to => "/home#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
