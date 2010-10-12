@@ -21,7 +21,7 @@
 	  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
 		<td><%= article.user.email %></td>
 	    <td><%= article.name %></td>
-	    <td><%= article.description %></td>
+	    <td><%= redcloth(article.description) %></td>
 	    <td><%= article.category.name %></td>
 			<td><%= link_to 'Show', article %></td>
 		
