@@ -16,5 +16,10 @@ $(function(){
     $(this).parent().remove();
     return false;
   })
+
+  $('a#toggle').click(function() {
+    $('#togglebox').toggle(400);
+    return false;
+  });
   
 });
