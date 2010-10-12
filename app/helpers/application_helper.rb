@@ -4,19 +4,23 @@ module ApplicationHelper
     RedCloth.new(text).to_html.html_safe
   end
   
-  # def render_side_menu
-  #   cat = Category.all
-  #   menu = "".html_safe
-  #   cat.each do |ctgry|
-  #     menu += content_tag(:span,ctgry.name)
-  #     articles = "".html_safe
-  #     arts = Article.find_by_category_id(ctgry.id)
-  #     arts.each do |art|
-  #       articles += content_tag(:li,art.name)
-  #     end
-  #     content_tag(:ul,articles)
-  #   end
-  #   menu
-  # end
+  def render_side_menu
+    cat = Category.all
+    menu = "".html_safe
+    cat.each do |ctgry|
+      menu += content_tag(:li,ctgry.name)
+      articles = "".html_safe
+      arts = Article.where("category_id = ?",ctgry.id)
+      arts.each do |art|
+         articles += content_tag(:li,(link_to art.name, art))
+      end
+      articles_list = "".html_safe
+      articles_list += content_tag(:ul,articles, :class => "childList")
+      menu += articles_list
+    end
+    menu = content_tag(:ul,menu)
+    
+    menu
+  end
   
 end

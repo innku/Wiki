@@ -1,7 +1,8 @@
-body {
+html,body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+  margin:0px;
   height:100%;
 }
 
@@ -21,11 +22,12 @@ a {
 
 #container {
   width: 70%;
-  margin: 0 auto;
+  float:right;
   background-color: #FFF;
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
+  height:80%;
 }
 
 #usernav {
@@ -52,9 +54,11 @@ a {
 #sideMenu{
 	float: left;
 	background-color:#FFFFFF;
-	width:10%;
+	width:21%;
 	border: solid 1px #000;
-	height:100%;
+	height:80%;
+	margin-top: 40px;	
+	word-wrap: break-word
 }
 
 #article_content{
@@ -101,4 +105,8 @@ a {
 .list_line_even {
 	
 	background:#A9D0F5;
+}
+
+.childList {
+	margin-left:-30px;
 }
