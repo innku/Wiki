@@ -31,8 +31,8 @@ module ApplicationHelper
     article = Article.first(:order => ("hit_count DESC"))
     content = "".html_safe
     content += content_tag(:p, content_tag(:b,"Name: ") + article.name)
-    content += content_tag(:p, content_tag(:b,"Description: ") + article.description)
-    content += content_tag(:p, content_tag(:b,"Content: ") + article.content)
+    content += content_tag(:p, content_tag(:b,"Description: ") + redcloth(article.description))
+    content += content_tag(:p, content_tag(:b,"Content: ") + redcloth(article.content))
     content += content_tag(:p, content_tag(:b,"Hit Count: ") + article.hit_count.to_s)
     
     content_tag(:div, content, :class => "featured")

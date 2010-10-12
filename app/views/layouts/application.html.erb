@@ -9,19 +9,24 @@
 <body>
 	<div id="banner">
 			Banner
+			<br />
+			<br />
+			<br />
+			<br />
+			<div id="usernav">
+				<% if user_signed_in? %>
+					Signed in as <%= current_user.email %> you? <%= link_to 'Sign out', destroy_user_session_path%>
+				<% else %>
+					Signed in as Guest <%= link_to 'Sign in', new_user_session_path %> or <%= link_to 'Sign up', new_user_registration_path%>
+				<% end %>
+
+			</div>
 	</div>
 	<div id="sideMenu">
 		<%= render_side_menu %>
 	</div>
 	<div id="container">
-		<div id="usernav">
-			<% if user_signed_in? %>
-				Signed in as <%= current_user.email %> you? <%= link_to 'Sign out', destroy_user_session_path%>
-			<% else %>
-				Signed in as Guest <%= link_to 'Sign in', new_user_session_path %> or <%= link_to 'Sign up', new_user_registration_path%>
-			<% end %>
-	
-		</div>
+		
 	
 		<%= yield %>
 	</div>
