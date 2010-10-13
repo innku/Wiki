@@ -32,6 +32,7 @@ a {
 #usernav {
 	
 	text-align:right;
+	padding:50px 20px;
 
 }
 
@@ -70,6 +71,7 @@ a {
 	background-color: #FFF;
 	margin-top: 10px;
 	text-align:center;
+	
 }
 
 .fieldWithErrors {

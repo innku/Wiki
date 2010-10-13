@@ -1,5 +1,17 @@
 Wiki::Application.routes.draw do
   
+  get "users/new"
+
+  get "users/_form"
+
+  get "user/new"
+
+  get "user/_form"
+
+  get "register/form"
+
+  get "register/new"
+
   get "home/index"
 
   get 'articles/index'
@@ -12,6 +24,9 @@ Wiki::Application.routes.draw do
   resources :articles
   
   resources :home
+  
+  resources :users
+
   
   root :to => "/home#index"
 
