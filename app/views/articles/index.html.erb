@@ -3,6 +3,9 @@
 	
 	
 	<br />
+	<%= submit_tag t('.new_article'), :type => 'button', :onclick => "location.href='articles/new'" %>
+	<br />
+	
 	<table border='1'>
 	  <tr>
 		<th><%= t(:user)%></th>
@@ -11,7 +14,6 @@
 	    <th><%= t(:category)%></th>
 	    <th></th>
 	  </tr>
-
 	<% @articles.each do |article| %>
 	  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
 		<td><%= article.user.email %></td>
@@ -31,7 +33,6 @@
 	<br />
 	<% if user_signed_in? %>
 
-		<%= link_to t('.new_article'), new_article_path %>
 		<%= link_to t('.new_category'), new_category_path %>
 		
 

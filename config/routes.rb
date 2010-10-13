@@ -16,7 +16,6 @@ Wiki::Application.routes.draw do
 
   get 'articles/index'
   
-  scope '(:locale)' do
     devise_for :users
   
     resources :categories
@@ -29,7 +28,6 @@ Wiki::Application.routes.draw do
   
     root :to => "/home#index"
   
-  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
