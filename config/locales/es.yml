@@ -13,9 +13,11 @@ es:
     
     layouts:
         application:
-            not_you:      "No es usted?"
-            create_user:  "Crear usuario"
-            guest:        "Usuario Invitado"
+            not_you:            "No es usted?"
+            create_user:        "Crear usuario"
+            guest:              "Usuario Invitado"
+            search:             "Buscar"
+            search_article:     "Buscar un articulo"
     
     home:
         index:
@@ -43,7 +45,6 @@ es:
         index:
             new_article:        "Crear articulo"
             new_category:       "Crear categoria"
-            search:             "Buscar"
             listing_articles:   "Articulos"
             
     categories:

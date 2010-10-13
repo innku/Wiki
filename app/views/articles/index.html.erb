@@ -1,11 +1,6 @@
 
 	<h1><%= t('.listing_articles')%></h1>
 	
-	<%= form_tag(articles_path, :method => 'get') do %>
-		<%= label_tag t('.search') %>
-		<%= text_field_tag :q %>
-		<%= submit_tag t('.search')%>
-	<% end %>
 	
 	<br />
 	<table border='1'>
