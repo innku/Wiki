@@ -3,27 +3,27 @@
 <p>
 
 	
-  <b>Name:</b>
+  <b><%= t(:name) %>:</b>
   <%= @article.name %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b><%= t(:description) %>:</b>
   <%= redcloth(@article.description) %>
 </p>
 
 <p>
-  <b>Content:</b>
+  <b><%= t(:content) %>:</b>
   <%= redcloth(@article.content) %>
 </p>
 
 <p>
-  <b>Category:</b>
+  <b><%= t(:name) %>:</b>
   <%= @article.category.name %>
 </p>
 
 <p>
-  <b>Hit count:</b>
+  <b><%= t(:hit_count)%>:</b>
   <%= @article.hit_count %>
 </p>
 

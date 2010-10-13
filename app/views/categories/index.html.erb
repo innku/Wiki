@@ -1,8 +1,8 @@
-<h1>Listing categories</h1>
+<h1><%= t('.categories')%></h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th><%= t(:name)%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,11 +11,11 @@
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to t(:show), category %></td>
 	
 	<% if user_signed_in? %>
-		<td><%= link_to 'Edit', edit_category_path(category) %></td>
-		<td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+		<td><%= link_to t(:edit), edit_category_path(category) %></td>
+		<td><%= link_to t(:destroy), category, :confirm => 'Are you sure?', :method => :delete %></td>
 	<% end %>  
 </tr>
 <% end %>
@@ -23,6 +23,6 @@
 
 <br />
 
-<%= link_to 'New Category', new_category_path %>
-<%= link_to 'View Articles', articles_path %>
+<%= link_to t('.new_category'), new_category_path %>
+<%= link_to t('.view_articles'), articles_path %>
 

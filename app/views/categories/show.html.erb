@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t(:name)%></b>
   <%= @category.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to t(:show), edit_category_path(@category) %> |
+<%= link_to t('.view_categories'), categories_path %>

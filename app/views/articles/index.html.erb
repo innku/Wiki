@@ -1,19 +1,19 @@
 
-	<h1>Listing articles</h1>
+	<h1><%= t('.listing_articles')%></h1>
 	
 	<%= form_tag(articles_path, :method => 'get') do %>
-		<%= label_tag "Search Term" %>
+		<%= label_tag t('.search') %>
 		<%= text_field_tag :q %>
-		<%= submit_tag 'Search'%>
+		<%= submit_tag t('.search')%>
 	<% end %>
 	
 	<br />
 	<table border='1'>
 	  <tr>
-		<th>User</th>
-	    <th>Name</th>
-	    <th>Description</th>
-	    <th>Category</th>
+		<th><%= t(:user)%></th>
+	    <th><%= t(:name)%></th>
+	    <th><%= t(:description)%></th>
+	    <th><%= t(:category)%></th>
 	    <th></th>
 	  </tr>
 
@@ -23,11 +23,11 @@
 	    <td><%= article.name %></td>
 	    <td><%= redcloth(article.description) %></td>
 	    <td><%= article.category.name %></td>
-			<td><%= link_to 'Show', article %></td>
+			<td><%= link_to t(:show), article %></td>
 		
 		<% if user_signed_in? %>
-	    	<td><%= link_to 'Edit', edit_article_path(article) %></td>
-			<td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+	    	<td><%= link_to t(:edit), edit_article_path(article) %></td>
+			<td><%= link_to t(:destroy), article, :confirm => 'Are you sure?', :method => :delete %></td>
 		<% end %>
 	  </tr>
 	<% end %>
@@ -36,8 +36,8 @@
 	<br />
 	<% if user_signed_in? %>
 
-		<%= link_to 'New Article', new_article_path %>
-		<%= link_to 'New Category', new_category_path %>
+		<%= link_to t('.new_article'), new_article_path %>
+		<%= link_to t('.new_category'), new_category_path %>
 		
 
 	<% end %>

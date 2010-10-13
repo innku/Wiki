@@ -1,13 +1,10 @@
 <h1>Innku Wiki</h1>
-<p>Welcome to Innku's knwoledge repository a place where we can all share our knowledge if you have some knowledge you want to share why don't you
-	<%= link_to "Write an article", new_article_path%> or if you are having some problems why don't you try and <%= link_to "search for an article", articles_path %> to solve your problems
-	
-	
-Enjoy!
-</p>
+
+<p> <%= t('.welcome') %> <%= link_to t('.create_article'), new_article_path %>  <%= t(:or)%>  <%= link_to t('.search_article'),articles_path%> <%= t('.welcome2')%>  
+
 <br />
 
-<p style="font-size:2em;"><b>Featured Article </b></p>
+<p style="font-size:2em;"><b><%= t('.featured_articl')%> </b></p>
 
 <%= render_featured_article %>
 

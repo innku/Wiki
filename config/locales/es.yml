@@ -1,0 +1,63 @@
+
+es:
+    user:           "Usuario"
+    description:    "Descripcion"
+    name:           "Nombre"
+    category:       "Categoria"
+    content:        "Contenido"
+    hit_count:      "Visitas"
+    or:             "o"
+    show:           "Mostrar"
+    edit:           "Editar"
+    destroy:        "Eliminar"
+    
+    layouts:
+        application:
+            not_you:      "No es usted?"
+            create_user:  "Crear usuario"
+            guest:        "Usuario Invitado"
+    
+    home:
+        index:
+            welcome:            "Bienvenido a el repositorio de conocimientos de Inkku un lugar donde todos nosotros podemos compartir nuestro conocimiento si tienes algo que deseas compatir porque no"
+            create_article:     "Creas un Articulo"
+            search_article:     "Busca un articulo"
+            welcome2:           "si tienes algun problema y no sabes como solucionarlo"
+            featured_article:   "Articulo Destacado"
+            
+    devise:
+        sessions:
+            new:
+                remember_me:    "Recordarme"
+        shared:
+            links:
+                forgot:     "Olvidaste tu password?"
+                
+    articles:
+        form:
+            style_guide:    "Mostrar guia de estilos"
+            create_article: "Crear Articulo"
+            
+        new:
+            new_article:    "Articulo Nuevo"
+        index:
+            new_article:        "Crear articulo"
+            new_category:       "Crear categoria"
+            search:             "Buscar"
+            listing_articles:   "Articulos"
+            
+    categories:
+        new:
+            new_category:       "Categoria nueva"
+            view_categories:    "Ver categorias"
+        form:
+            create_category:    "Crear categoria"
+        index:
+            categories:         "Categorias"
+            sure:               "Estas seguro"
+            new_category:       "Nueva categoria"
+            view_articles:      "Ver articulos"
+        show:
+            view_categories:    "Ver categorias"
+            
+        

@@ -3,7 +3,7 @@
 <head>
   <title>Wiki</title>
   <%= stylesheet_link_tag 'application', 'scaffold', 'jquery.ui.all' %>
-  <%= javascript_include_tag 'jquery', 'jquery-ui','application' %>
+  <%= javascript_include_tag 'jquery', 'jquery-ui','application', 'rails' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -11,9 +11,9 @@
 			Banner
 			<div id="usernav">
 				<% if user_signed_in? %>
-					Signed in as <%= current_user.email %>, you? <%= link_to 'Sign out', destroy_user_session_path%> or <%= link_to 'Create user', new_user_path%>
+					<%= current_user.email %>, <%= t('.not_you')%> <%= link_to 'Log out', destroy_user_session_path%> <%= t(:or) %> <%= link_to t('.create_user'), new_user_path%>
 				<% else %>
-					Signed in as Guest <%= link_to 'Sign in', new_user_session_path %> 
+					<%= t('.guest')%> <%= link_to 'Sign in', new_user_session_path %> 
 				<% end %>
 
 			</div>
