@@ -9,6 +9,8 @@ class Article < ActiveRecord::Base
   validates  :content, :description, :category, :presence => { :if => :published? }
   
   scope :published, where({:published => true})
+  scope :drafts, where({:published => false})
+  
     
   def increase_count!
     self.hit_count += 1  

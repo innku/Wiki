@@ -35,7 +35,7 @@ GEM
     babosa (0.2.0)
     bcrypt-ruby (2.1.2)
     builder (2.1.2)
-    cancan (1.3.4)
+    cancan (1.4.0)
     devise (1.1.3)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 0.10.7)

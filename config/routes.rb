@@ -5,7 +5,9 @@ Wiki::Application.routes.draw do
   resources :articles
   resources :home
   resources :users
-
+  
+  match '/profile' => "users#show", :as => :profile
+  
   root :to => "home#index"
   
   # The priority is based upon order of creation:

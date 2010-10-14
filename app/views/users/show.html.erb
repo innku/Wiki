@@ -1,9 +1,10 @@
 <h1>User Profile</h1>
 
 <div>
-    <%= t(:name)%> 
+    <%= t(:email)%>: 
     <%= current_user.email %>
 </div>
 <br />
 <%= link_to t(:edit_password), edit_user_password_path %>
+
 <%= render :partial => "user_articles"  %>

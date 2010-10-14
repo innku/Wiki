@@ -15,8 +15,9 @@
       	
       	<div id="login">
         	<% if user_signed_in? %>
-          	<p><%= current_user.email %>, <%= t('.not_you')%> 
-          	<%= link_to t('.log_out'), destroy_user_session_path%> <%= t(:or) %> <%= link_to t('.create_user'), new_user_path%></p>
+          	<p><%= current_user.email %>, 
+          	  <%= link_to t('.profile'), profile_path %> |
+          	  <%= link_to t('.log_out'), destroy_user_session_path%></p>
   				<% else %>
           	<p><%= t('.guest')%> <%= link_to t('.sign_in'), new_user_session_path %></p>
   				<% end %>

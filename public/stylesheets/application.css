@@ -158,7 +158,6 @@ div.description p {font-family: Georgia, "Times New Roman", Times, serif; font-s
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	margin-bottom: 15px;
-	min-height: 67px;
 }
 
 .toparticle:hover {background-color: #d9f8c7;}

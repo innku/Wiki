@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show,:index]
+  
+  before_filter :find_user, :only => :show
+  authorize_resource
   
   def new
     @user = User.new
@@ -15,6 +17,11 @@ class UsersController < ApplicationController
   end
   
   def show
+  end
+  
+  private 
+  def find_user
+    @user = current_user
   end
 
 end

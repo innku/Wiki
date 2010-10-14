@@ -8,12 +8,15 @@ class Ability
     
     can :read, Article
     
-    if !user.new_record?
-      can :create, Article
-    end
-    
     can :modify, Article do |article|
       article.user == user
+    end
+    
+    if !user.new_record?
+      can :create, Article
+      can :manage, User do |u|
+        u == user
+      end
     end
     
     if user.admin?

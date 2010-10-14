@@ -3,6 +3,7 @@ es:
   user:           "Usuario"
   description:    "Descripcion"
   name:           "Nombre"
+  email:          "Correo Electrónico"
   category:       "Categoria"
   content:        "Contenido"
   hit_count:      "Visitas"
@@ -24,6 +25,7 @@ es:
       guest:              "Usuario Invitado"
       log_out:            "Salir"
       sign_in:            "Entrar"
+      profile:            "Perfil"
     sidemenu:
       search:             "Buscar"
       search_article:     "Buscar un articulo"
