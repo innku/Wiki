@@ -27,15 +27,5 @@ module ApplicationHelper
     menu
   end
   
-  def render_featured_article
-    article = Article.first(:order => ("hit_count DESC"))
-    content = "".html_safe
-    content += content_tag(:p, content_tag(:b, t(:name) + ": ") + article.name)
-    content += content_tag(:p, content_tag(:b, t(:description) + ": ") + redcloth(article.description))
-    content += content_tag(:p, content_tag(:b, t(:content) + ": ") + redcloth(article.content))
-    content += content_tag(:p, content_tag(:b, t(:hit_count) + ": ") + article.hit_count.to_s)
-    
-    content_tag(:div, content, :class => "featured")
-  end
   
 end

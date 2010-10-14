@@ -1,0 +1,16 @@
+	<div id="search">
+    <%= form_tag(articles_path, :method => 'get') do %>
+			<%= text_field_tag :q, nil %>
+		<% end %>
+	</div>
+	
+	<div id="menu">
+		<% @categories.each do |category| %>
+		  <h1><%= category.name %></h1>
+		  <ul>
+		    <% category.articles.each do |article| %>
+		      <li><%= link_to article.name, article %></li>
+		    <% end %>
+		  </ul>
+		<% end %>
+	</div>

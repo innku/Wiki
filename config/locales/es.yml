@@ -16,6 +16,9 @@ es:
             not_you:            "No es usted?"
             create_user:        "Crear usuario"
             guest:              "Usuario Invitado"
+            log_out:            "Salir"
+            sign_in:            "Entrar"
+        sidemenu:
             search:             "Buscar"
             search_article:     "Buscar un articulo"
     

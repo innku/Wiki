@@ -16,17 +16,17 @@ Wiki::Application.routes.draw do
 
   get 'articles/index'
   
-    devise_for :users
-  
-    resources :categories
+  devise_for :users
 
-    resources :articles
-  
-    resources :home
-  
-    resources :users
-  
-    root :to => "/home#index"
+  resources :categories
+
+  resources :articles
+
+  resources :home
+
+  resources :users
+
+  root :to => "home#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -79,7 +79,7 @@ Wiki::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
   
-  root :to => 'articles#index'
+  
 
   # See how all your routes lay out with "rake routes"
 
