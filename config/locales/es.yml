@@ -21,6 +21,7 @@ es:
         sidemenu:
             search:             "Buscar"
             search_article:     "Buscar un articulo"
+            new_article:         "Publicar nuevo articulo"
     
     home:
         index:

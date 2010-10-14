@@ -46,18 +46,12 @@ body{text-align:center;}#ft{clear:both;}#doc,#doc2,#doc3,#doc4,.yui-t1,.yui-t2,.
 }
 
 #search{
-	background-image:url("/images/searchback.png");
-	background-repeat:no-repeat;
-	width: 240px;
-	height: 30px;
-	margin-left:30px;
+	height: 50px;
 }
 
 #search input[type=text]{
-	border:medium none;
-	margin-left:4px;
-	margin-top:4px;
-	width:232px;
+	border: 1px solid #cdcdcd;
+	width:260px;
 	font-size: 18px;
 }
 
@@ -119,14 +113,16 @@ code {font-size: 12px;}
 
 /* Forms */
 
-input[type=text], textarea { background: #fff; border: 1px solid #cdcdcd;-moz-border-radius:5px;
+input[type=text], input[type=password], textarea { background: #fff; border: 1px solid #cdcdcd;-moz-border-radius:5px;
 -webkit-border-radius:5px; padding: 6px; width: 100%;}
 
 form {width: 100%;}
 form .field {padding: 0 18px 0 0;}
 form .box input {width: 200px;}
 
-input[type=submit] {
+form.user_new input[type=text], form.user_new input[type=password] {width: 260px;}
+
+input[type=submit], a.button {
 	background: #369C9E;
 	color: #fff;
 	font-size: 18px;

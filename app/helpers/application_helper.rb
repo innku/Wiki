@@ -4,27 +4,14 @@ module ApplicationHelper
     RedCloth.new(text).to_html.html_safe
   end
   
-  def render_side_menu
-    cat = Category.all
-    menu = "".html_safe
-    menu += (link_to "Home", "/home")
-    menu+= content_tag(:br,nil)
-    menu+= content_tag(:br,nil)
-    
-    cat.each do |ctgry|
-      menu += content_tag(:li,ctgry.name)
-      articles = "".html_safe
-      arts = Article.where("category_id = ?",ctgry.id)
-      arts.each do |art|
-         articles += content_tag(:li,(link_to art.name, art))
-      end
-      articles_list = "".html_safe
-      articles_list += content_tag(:ul,articles, :class => "childList")
-      menu += articles_list
-    end
-    menu = content_tag(:ul,menu)
-    
-    menu
+  def article_admin_links(article)
+    html = "".html_safe
+    if current_user && current_user == article.user && request.fullpath != root_path
+      html << (link_to t(:edit), edit_article_path(article))
+      html << " | "
+  		html << (link_to t(:destroy), article, :confirm => 'Are you sure?', :method => :delete)
+  	end
+  	return html
   end
   
   

@@ -1,6 +1,7 @@
 <div class="toparticle"><!--toparticle-->
 	<a href="<%= article_path(article) %>">
 		<h3><%= article.name %></h3>
+		<%= article_admin_links(article) %>
 		<p><%= redcloth(article.description) %></p>
 	</a>
 </div><!--/toparticle-->

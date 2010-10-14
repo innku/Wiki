@@ -1,39 +1,7 @@
+<h1><%= t('.listing_articles')%></h1>
 
-	<h1><%= t('.listing_articles')%></h1>
-	
-	
-	<br />
-	<%= submit_tag t('.new_article'), :type => 'button', :onclick => "location.href='articles/new'" %>
-	<br />
-	
-	<table border='1'>
-	  <tr>
-		<th><%= t(:user)%></th>
-	    <th><%= t(:name)%></th>
-	    <th><%= t(:description)%></th>
-	    <th><%= t(:category)%></th>
-	    <th></th>
-	  </tr>
-	<% @articles.each do |article| %>
-	  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
-		<td><%= article.user.email %></td>
-	    <td><%= article.name %></td>
-	    <td><%= redcloth(article.description) %></td>
-	    <td><%= article.category.name %></td>
-			<td><%= link_to t(:show), article %></td>
-		
-		<% if user_signed_in? %>
-	    	<td><%= link_to t(:edit), edit_article_path(article) %></td>
-			<td><%= link_to t(:destroy), article, :confirm => 'Are you sure?', :method => :delete %></td>
-		<% end %>
-	  </tr>
-	<% end %>
-	</table>
+<%= render @articles %>
 
-	<br />
-	<% if user_signed_in? %>
-
-		<%= link_to t('.new_category'), new_category_path %>
-		
-
-	<% end %>
+<% if user_signed_in? %>
+	<%= link_to t('.new_category'), new_category_path %>
+<% end %>
