@@ -7,39 +7,43 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
     @article.increase_count!
   end
 
   def new
-    @article = Article.new
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def create
     @article = current_user.articles.build(params[:article])
-    if @article.save
-      redirect_to(@article, :notice => 'Article was successfully created.')
-    else
-      render :action => "new"
+    respond_to do |format|
+      if @article.save
+        format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
+        format.js {}
+      else
+        format.html { render :action => "new" }
+        format.js
+      end
     end
   end
 
   def update
     params[:article][:tag_list] ||= []
-    @article = Article.find(params[:id])
-    if @article.update_attributes(params[:article])
-      redirect_to(@article, :notice => 'Article was successfully updated.')
-    else
-      render :action => "edit"
+    
+    respond_to do |format|
+      if @article.update_attributes(params[:article])
+        format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
+        format.js {}
+      else
+        format.html { render :action => "new" }
+        format.js
+      end
     end
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     redirect_to(@article, :notice => 'Article was successfully deleted.')
   end

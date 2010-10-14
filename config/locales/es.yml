@@ -1,76 +1,113 @@
 
 es:
-    user:           "Usuario"
-    description:    "Descripcion"
-    name:           "Nombre"
-    category:       "Categoria"
-    content:        "Contenido"
-    hit_count:      "Visitas"
-    or:             "o"
-    show:           "Mostrar"
-    edit:           "Editar"
-    destroy:        "Eliminar"
-    access_denied:  "No estas autorizado para ver esta página"
-    sure:           "¿Estas seguro que lo deseas eliminar?"
-    categories_link:     "Categorias"
+  user:           "Usuario"
+  description:    "Descripcion"
+  name:           "Nombre"
+  category:       "Categoria"
+  content:        "Contenido"
+  hit_count:      "Visitas"
+  or:             "o"
+  show:           "Mostrar"
+  edit:           "Editar"
+  destroy:        "Eliminar"
+  access_denied:  "No estas autorizado para ver esta página"
+  sure:           "¿Estas seguro que lo deseas eliminar?"
+  categories_link:     "Categorias"
     
     
-    layouts:
-        application:
-            not_you:            "No es usted?"
-            create_user:        "Crear usuario"
-            guest:              "Usuario Invitado"
-            log_out:            "Salir"
-            sign_in:            "Entrar"
-        sidemenu:
-            search:             "Buscar"
-            search_article:     "Buscar un articulo"
-            new_article:         "Publicar nuevo articulo"
-    
-    home:
-        index:
-            welcome:            "Bienvenido a el repositorio de conocimientos de Innku un lugar donde todos nosotros podemos compartir nuestro conocimiento si tienes algo que deseas compatir porque no"
-            create_article:     "Creas un Articulo"
-            search_article:     "Busca un articulo"
-            welcome2:           "si tienes algun problema y no sabes como solucionarlo"
-            featured_articles:   "Articulos Destacados"
+  layouts:
+    application:
+      not_you:            "No es usted?"
+      create_user:        "Crear usuario"
+      guest:              "Usuario Invitado"
+      log_out:            "Salir"
+      sign_in:            "Entrar"
+    sidemenu:
+      search:             "Buscar"
+      search_article:     "Buscar un articulo"
+      new_article:         "Publicar nuevo articulo"
+  
+  home:
+    index:
+      welcome:            "Bienvenido a el repositorio de conocimientos de Innku un lugar donde todos nosotros podemos compartir nuestro conocimiento si tienes algo que deseas compatir porque no"
+      create_article:     "Creas un Articulo"
+      search_article:     "Busca un articulo"
+      welcome2:           "si tienes algun problema y no sabes como solucionarlo"
+      featured_articles:   "Articulos Destacados"
+          
+  devise:
+    sessions:
+      new:
+        remember_me:    "Recordarme"
+    shared:
+      links:
+        forgot:     "Olvidaste tu password?"
+              
+  articles:
+    form:
+      style_guide:    "Mostrar guia de estilos"
+      save_article:   "Guardar Articulo"
+      publish:        "¿Desea publicar este artículo?"
+        
+    new:
+      new_article:    "Articulo Nuevo"
+    edit:
+      edit_article:    "Editar Artículo"
+    index:
+      new_article:        "Crear articulo"
+      new_category:       "Crear categoria"
+      listing_articles:   "Articulos"
+    show:
+      view_articles:      "Ver articulos"
+          
+  categories:
+    new:
+      new_category:       "Categoria nueva"
+      view_categories:    "Ver categorias"
+    form:
+      create_category:    "Crear categoria"
+    index:
+      categories:         "Categorias"
+      sure:               "Estas seguro"
+      new_category:       "Nueva categoria"
+      view_articles:      "Ver articulos"
+    show:
+      view_categories:    "Ver categorias"
             
-    devise:
-        sessions:
-            new:
-                remember_me:    "Recordarme"
-        shared:
-            links:
-                forgot:     "Olvidaste tu password?"
-                
-    articles:
-        form:
-            style_guide:    "Mostrar guia de estilos"
-            save_article: "Guardar Articulo"
-            
-        new:
-            new_article:    "Articulo Nuevo"
-        edit:
-            edit_article:    "Editar Artículo"
-        index:
-            new_article:        "Crear articulo"
-            new_category:       "Crear categoria"
-            listing_articles:   "Articulos"
-        show:
-            view_articles:      "Ver articulos"
-            
-    categories:
-        new:
-            new_category:       "Categoria nueva"
-            view_categories:    "Ver categorias"
-        form:
-            create_category:    "Crear categoria"
-        index:
-            categories:         "Categorias"
-            sure:               "Estas seguro"
-            new_category:       "Nueva categoria"
-            view_articles:      "Ver articulos"
-        show:
-            view_categories:    "Ver categorias"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one:          "hace aprox %{count} hora"
+        other:        "hace aprox %{count} horas"
+      less_than_x_minutes:
+        one:          "hace menos de %{count} minuto"
+        other:        "hace menos de %{count} minutos"
+      less_than_x_seconds:
+        one:          "hace menos de %{count} segundo"
+        other:        "hace menos de %{count} segundos"
+      half_a_minute:  "hace medio minuto"
+      x_minutes:
+        one:          "hace %{count} minuto"
+        other:        "hace %{count} minutos"
+      x_days:
+        one:          "hace 1 dia"
+        other:        "hace %{count} dias"
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: '%d de %B'
+      long: '%d de %B, %Y'
+    day_names: [Domingo, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado]
+    abbr_day_names: [Dom, Lun, Mar, Mie, Jue, Vie, Sab]
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+    abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S"
+      short: "%d %b %H:%M"
+      long: "%d de %B, %Y %H:%M"
+    am: "am"
+    pm: "pm"
             
         

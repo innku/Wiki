@@ -120,6 +120,17 @@ form {width: 100%;}
 form .field {padding: 0 18px 0 0;}
 form .box input {width: 200px;}
 
+h1.form {float: left;}
+div#saved {
+	float: right;
+	background: #eee;
+	border: 1px solid #aaa;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 6px 9px;
+	margin-top: 18px;
+}
+.form_header {overflow: auto;}
+
 form.user_new input[type=text], form.user_new input[type=password] {width: 260px;}
 
 input[type=submit], a.button {

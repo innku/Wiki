@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101014173207) do
+ActiveRecord::Schema.define(:version => 20101014180300) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20101014173207) do
     t.integer  "category_id"
     t.integer  "user_id"
     t.integer  "hit_count",   :default => 0
+    t.boolean  "published",   :default => false
   end
 
   create_table "categories", :force => true do |t|
@@ -40,7 +41,6 @@ ActiveRecord::Schema.define(:version => 20101014173207) do
   end
 
   add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
 
   create_table "tags", :force => true do |t|
     t.string "name"
