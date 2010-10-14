@@ -12,16 +12,14 @@
       <div id="hd"><!--hd-->
       	<%= link_to image_tag("logo.png"), root_path %>
       	
-      	<% if user_signed_in? %>
-        	<div id="bienvenido">
-        		<p><%= current_user.email %>, <%= t('.not_you')%> 
-        		<%= link_to t('.log_out'), destroy_user_session_path%> <%= t(:or) %> <%= link_to t('.create_user'), new_user_path%></p>
-        	</div>
-				<% else %>
-  				<div id="login">
-        		<%= t('.guest')%> <%= link_to t('.sign_in'), new_user_session_path %> 
-        	</div>
-				<% end %>
+      	<div id="login">
+        	<% if user_signed_in? %>
+          	<p><%= current_user.email %>, <%= t('.not_you')%> 
+          	<%= link_to t('.log_out'), destroy_user_session_path%> <%= t(:or) %> <%= link_to t('.create_user'), new_user_path%></p>
+  				<% else %>
+          	<p><%= t('.guest')%> <%= link_to t('.sign_in'), new_user_session_path %></p>
+  				<% end %>
+				</div>
       </div><!--/hd-->
       
       <div id="bd">

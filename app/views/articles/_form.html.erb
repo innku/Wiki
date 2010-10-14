@@ -17,33 +17,35 @@
   </div>
   <div class="field">
     <%= f.label t(:description) %><br />
-    <%= f.text_area :description, :rows => 10 %>
+    <%= f.text_area :description, :rows => 4 %>
   </div>
   <div class="field">
     <%= f.label t(:content) %>
-	<%= link_to t('.style_guide'), "#", :id => "toggle" %>
+	  <%= link_to t('.style_guide'), "#", :id => "toggle" %>
 	<br />
-	<div id="togglebox">
+	<div id="togglebox" class="box">
 		<%= render_textile_design_guide %>
 	</div>
 	<br />
     <%= f.text_area :content, :rows => 30 %>
   </div>
 
-  <div class="field">
-    <%= f.label t(:category) %>
-    <%= f.select :category_id, Category.all.collect{|c| [c.name, c.id] }, :include_blank => true %>
-  </div>
-
-  <div class="field">
-    <%= label_tag :tag %>
-    <%= text_field_tag :tag %>
-    <%= link_to "Agregar Tag", "#", :id => "add_tag" %>
-    <%= tags_hidden_fields(@article) %>
+  <div class="box">
+    <div class="field">
+      <%= f.label t(:category) %>
+      <%= f.select :category_id, Category.all.collect{|c| [c.name, c.id] }, :include_blank => true %>
+    </div>
+    
+    <div class="field">
+      <%= label_tag :tag %>
+      <%= text_field_tag :tag %>
+      <%= link_to "Agregar Tag", "#", :id => "add_tag" %>
+      <%= tags_hidden_fields(@article) %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= f.submit t('.create_article') %>
+    <%= f.submit t('.save_article') %>
   </div>
 <% end %>
 

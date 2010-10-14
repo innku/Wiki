@@ -1,12 +1,10 @@
-<h1>Innku Wiki</h1>
+<h1 class="title home">Innku Wiki</h1>
 
-<p> <%= t('.welcome') %> <%= link_to t('.create_article'), new_article_path %>  <%= t(:or)%>  <%= link_to t('.search_article'),articles_path%> <%= t('.welcome2')%>  
+<p><%= t('.welcome') %> <%= link_to t('.create_article'), new_article_path %>  <%= t(:or)%>  <%= link_to t('.search_article'),articles_path%> <%= t('.welcome2')%>  
 
-<br />
+<br/><br/>
 
-<p style="font-size:2em;"><b><%= t('.featured_article')%> </b></p>
-
-
-<%= render :partial => @article %>
+<h1 class="title home"><%= t('.featured_articles')%></h1>
+<%= render @articles %>
 
 

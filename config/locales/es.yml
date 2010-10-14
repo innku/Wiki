@@ -24,11 +24,11 @@ es:
     
     home:
         index:
-            welcome:            "Bienvenido a el repositorio de conocimientos de Inkku un lugar donde todos nosotros podemos compartir nuestro conocimiento si tienes algo que deseas compatir porque no"
+            welcome:            "Bienvenido a el repositorio de conocimientos de Innku un lugar donde todos nosotros podemos compartir nuestro conocimiento si tienes algo que deseas compatir porque no"
             create_article:     "Creas un Articulo"
             search_article:     "Busca un articulo"
             welcome2:           "si tienes algun problema y no sabes como solucionarlo"
-            featured_article:   "Articulo Destacado"
+            featured_articles:   "Articulos Destacados"
             
     devise:
         sessions:
@@ -41,14 +41,18 @@ es:
     articles:
         form:
             style_guide:    "Mostrar guia de estilos"
-            create_article: "Crear Articulo"
+            save_article: "Guardar Articulo"
             
         new:
             new_article:    "Articulo Nuevo"
+        edit:
+            edit_article:    "Editar Artículo"
         index:
             new_article:        "Crear articulo"
             new_category:       "Crear categoria"
             listing_articles:   "Articulos"
+        show:
+            view_articles:      "Ver articulos"
             
     categories:
         new:

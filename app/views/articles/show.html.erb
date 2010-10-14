@@ -1,37 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="header">
+  <div class="category"><span>Categoria &raquo;</span> <%= @article.category.name %></div>
+  <h1 class="title"><%= @article.name %></h1>	
+  <div class="description"><%= redcloth(@article.description) %></div>
+</div>
 
-<p>
-
-	
-  <b><%= t(:name) %>:</b>
-  <%= @article.name %>
-</p>
-
-<p>
-  <b><%= t(:description) %>:</b>
-  <%= redcloth(@article.description) %>
-</p>
-
-<p>
-  <b><%= t(:content) %>:</b>
+<div class="content">
   <%= redcloth(@article.content) %>
-</p>
+</div>
 
-<p>
-  <b><%= t(:category) %>:</b>
-  <%= @article.category.name %>
-</p>
+<div class="box tags">
+  <h2>Etiquetas:</h2>
+  <ul>
+    <% @article.tag_list.each do |tag| %>
+      <li><%= tag %></li>
+    <% end %>
+  </ul>
+</div>
 
-<p>
-  <b>Tags:</b>
-  <%= @article.tag_list %>
-</p>
-
-<p>
-  <b><%= t(:hit_count)%>:</b>
-  <%= @article.hit_count %>
-</p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'View Articles', articles_path %>
+<%= link_to t(:edit), edit_article_path(@article) %> |
+<%= link_to t('.view_articles'), articles_path %>

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @article = Article.first(:order => ("hit_count DESC"))
+    @articles = Article.order("hit_count DESC").limit(3)
   end
 
 end
