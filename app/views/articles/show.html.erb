@@ -17,5 +17,7 @@
   </ul>
 </div>
 
-<%= link_to t(:edit), edit_article_path(@article) %> |
-<%= link_to t('.view_articles'), articles_path %>
+<% if user_signed_in? %>
+  <%= link_to t(:edit), edit_article_path(@article) %> |
+  <%= link_to t('.view_articles'), articles_path %>
+<% end %>
