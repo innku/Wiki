@@ -6,4 +6,9 @@ class ApplicationController < ActionController::Base
   def load_categories
     @categories = Category.includes(:articles).order("name ASC")
   end
+  
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = t(:access_denied)
+    redirect_to root_url
+  end
 end

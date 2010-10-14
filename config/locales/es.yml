@@ -10,6 +10,10 @@ es:
     show:           "Mostrar"
     edit:           "Editar"
     destroy:        "Eliminar"
+    access_denied:  "No estas autorizado para ver esta página"
+    sure:           "¿Estas seguro que lo deseas eliminar?"
+    categories_link:     "Categorias"
+    
     
     layouts:
         application:

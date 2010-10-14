@@ -26,6 +26,11 @@
       <div id="bd">
       	<div id="yui-main">	
       		<div class="yui-b"><!--yui-b main column-->
+      		  
+      		  <% flash.each do |name, message| %>
+      		    <div id="<%= name %>" class="flash"><%= message %></div>
+      		  <% end %>
+      		  
 		        <%= yield %>
       		</div><!--/yui-b main column-->
       	</div>

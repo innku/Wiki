@@ -1,6 +1,5 @@
 class CategoriesController < ApplicationController
-
-  before_filter :authenticate_user!, :except => [:show,:index]
+  load_and_authorize_resource
   
   def index
     @categories = Category.all
@@ -8,21 +7,16 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
     
   end
 
   def new
-    @category = Category.new
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def create
-    @category = Category.new(params[:category])
-
     if @category.save
       redirect_to(@category, :notice => 'Category was successfully created.') 
     else
@@ -31,8 +25,6 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Category.find(params[:id])
-
     if @category.update_attributes(params[:category])
       redirect_to(@category, :notice => 'Category was successfully updated.') 
     else
@@ -41,9 +33,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
     @category.destroy
-
-      redirect_to(categories_url) 
+    redirect_to(categories_url) 
   end
 end

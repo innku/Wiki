@@ -17,7 +17,7 @@
   </ul>
 </div>
 
-<% if user_signed_in? %>
+<% if can? :modify, @article %>
   <%= link_to t(:edit), edit_article_path(@article) %> |
-  <%= link_to t('.view_articles'), articles_path %>
+  <%= link_to t(:destroy), article_path(@article), :method => :delete, :confirm => t(:sure) %>
 <% end %>
