@@ -17,7 +17,7 @@ class Article < ActiveRecord::Base
   
   def self.search(query)
     if query.blank?
-      self.all
+      self.published
     else
       conditions = []
       conditions << sanitize_sql(["articles.name #{$like} ?", "%#{query}%"])
