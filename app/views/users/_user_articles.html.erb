@@ -1,0 +1,13 @@
+<br />
+<br />
+<br />
+<h2> <%= t(:draft_articles) %> </h2>
+<div class="toparticle"><!--toparticle-->
+  <% current_user.articles.where("published = 0").each do |article| %>
+    <a href="<%= article_path(article) %>">
+  		<h3><%= article.name %></h3>
+    
+  		<p><%= redcloth(article.description) %></p>
+  	</a>
+  <% end %>
+</div><!--/toparticle-->

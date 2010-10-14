@@ -13,6 +13,8 @@ es:
   access_denied:  "No estas autorizado para ver esta página"
   sure:           "¿Estas seguro que lo deseas eliminar?"
   categories_link:     "Categorias"
+  edit_password:    "Cambiar password"
+  draft_articles:    "Articulos en borrador"
     
     
   layouts:

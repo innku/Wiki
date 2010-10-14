@@ -1,5 +1,9 @@
 Wiki::Application.routes.draw do
   
+  get "users/show"
+
+  get "user/show"
+
   get "users/new"
 
   get "users/_form"
