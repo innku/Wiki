@@ -1,6 +1,7 @@
 class Article < ActiveRecord::Base
   
   acts_as_taggable
+  has_friendly_id :name, :use_slug => true, :approximate_ascii => true
   
   belongs_to :category
   belongs_to :user
