@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_categories
   
   def load_categories
-    @categories = Category.includes(:articles).order("name ASC")
+    @categories = Category.includes(:published)
   end
   
   rescue_from CanCan::AccessDenied do |exception|

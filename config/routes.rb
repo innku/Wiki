@@ -1,33 +1,9 @@
 Wiki::Application.routes.draw do
   
-  get "users/show"
-
-  get "user/show"
-
-  get "users/new"
-
-  get "users/_form"
-
-  get "user/new"
-
-  get "user/_form"
-
-  get "register/form"
-
-  get "register/new"
-
-  get "home/index"
-
-  get 'articles/index'
-  
   devise_for :users
-
   resources :categories
-
   resources :articles
-
   resources :home
-
   resources :users
 
   root :to => "home#index"
