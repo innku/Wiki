@@ -4,7 +4,8 @@ class Article < ActiveRecord::Base
   
   belongs_to :category
   belongs_to :user
-  validates  :name, :content, :description, :category, :user, :presence => true
+  validates  :name, :user, :presence => true
+  validates  :content, :description, :category, :presence => { :if => :published? }
     
   def increase_count!
     self.hit_count += 1  
@@ -23,6 +24,15 @@ class Article < ActiveRecord::Base
       conditions << "articles.id IN (SELECT taggings.taggable_id FROM taggings JOIN tags ON taggings.tag_id = tags.id AND (#{tags_conditions}) WHERE taggings.taggable_type = 'Article')"
       where(conditions.join(" OR "))
     end
+  end
+  
+  def publish!
+    self.published = true
+    self.save!
+  end
+  
+  def published?
+    self.published
   end
   
   
