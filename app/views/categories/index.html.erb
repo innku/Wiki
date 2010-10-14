@@ -11,13 +11,12 @@
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    <td><%= link_to t(:show), category %></td>
-	
-	<% if user_signed_in? %>
-		<td><%= link_to t(:edit), edit_category_path(category) %></td>
-		<td><%= link_to t(:destroy), category, :confirm => 'Are you sure?', :method => :delete %></td>
-	<% end %>  
-</tr>
+    	
+  	<% if user_signed_in? %>
+  		<td><%= link_to t(:edit), edit_category_path(category) %></td>
+  		<td><%= link_to t(:destroy), category, :confirm => 'Are you sure?', :method => :delete %></td>
+  	<% end %>  
+  </tr>
 <% end %>
 </table>
 
