@@ -2,8 +2,5 @@
   var form = $("form#article_form");
   form.attr("action", "/articles/<%= @article.id %>");
   form.append("<input type='hidden' name='_method' value='put'/>");
-  
-  $("a#preview").show().attr("href", "/articles/<%= @article.cached_slug %>");
-  
   $("div#saved").html('Guardado: <span><%= time_ago_in_words(@article.updated_at, true)%></span>');
 <% end %>

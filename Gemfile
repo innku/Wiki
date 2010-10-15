@@ -8,3 +8,4 @@ gem 'acts-as-taggable-on'
 gem 'RedCloth'
 gem 'cancan'
 gem "friendly_id", "~> 3.1"
+gem "coderay"

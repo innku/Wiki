@@ -1,0 +1,42 @@
+.CodeRay {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-family: 'Courier New', 'Terminal', monospace;
+  color: #333;
+  padding: 9px 5px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 12px 0;
+}
+.CodeRay pre {
+  margin: 0px;
+  padding: 0px;
+  line-height: 16px;
+}
+
+.CodeRay .an { color:#E7BE69 }                      /* html attribute */
+.CodeRay .c  { color:#BC9358; font-style: italic; } /* comment */
+.CodeRay .ch { color:#1FBC43 }                      /* escaped character */
+.CodeRay .cl { color:#000;text-decoration: underline;}/* class */
+.CodeRay .co { color:#6D79F0; font-weight: bold; }  /* constant */
+.CodeRay .fl { color:#A4C260 }                      /* float */
+.CodeRay .fu { color:#0C24AA; font-weight: bold; }  /* function */
+.CodeRay .gv { color:#3C96A4 }                      /* global variable */
+.CodeRay .i  { color:#A4C260 }                      /* integer */
+.CodeRay .il { background:#fff }                 /* inline code */
+.CodeRay .iv { color:#D0CFFE }                      /* instance variable */
+.CodeRay .pp { color:#E7BE69 }                      /* doctype */
+.CodeRay .r  { color:#1738F5; font-weight: bold; }  /* keyword */
+.CodeRay .rx { color:#A4C260 }                      /* regex */
+.CodeRay .s  { color:#007A24 }                      /* string */
+.CodeRay .sy { color:#D21A19; font-weight: bold; }  /* symbol */
+.CodeRay .ta { color:#E7BE69 }                      /* html tag */
+.CodeRay .pc { color:#6D79F0; font-weight: bold; }  /* boolean */
+.CodeRay .k { color:#007A24; font-weight: normal; }  /* Regexp */
+.CodeRay .dl { color:#007A24; font-weight: normal; }  /* Regexp */
+.CodeRay .mod { color:#007A24; font-weight: normal; }  /* Regexp */
+.CodeRay .ke { color:#007A24; font-weight: bold; }  /* YML */
+
+.CodeRay .line_numbers { background: #eee; padding: 3px;}
+.CodeRay .code {padding: 3px 9px;}

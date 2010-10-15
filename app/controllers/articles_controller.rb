@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(params[:article])
+    @article.set_status!(params[:publish], params[:draft])
     respond_to do |format|
       if @article.save
         format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
@@ -31,6 +32,7 @@ class ArticlesController < ApplicationController
 
   def update
     params[:article][:tag_list] ||= []
+    @article.set_status!(params[:publish], params[:draft])
     
     respond_to do |format|
       if @article.update_attributes(params[:article])

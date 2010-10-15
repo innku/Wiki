@@ -11,9 +11,8 @@ class Article < ActiveRecord::Base
   scope :published, where({:published => true})
   scope :drafts, where({:published => false})
   
-    
   def increase_count!
-    self.hit_count += 1  
+    self.hit_count += 1
     self.save!
   end
   
@@ -31,13 +30,33 @@ class Article < ActiveRecord::Base
     end
   end
   
-  def publish!
+  def publish
     self.published = true
+  end
+  
+  def publish!
+    self.publish
     self.save!
+  end
+  
+  def unpublish
+    self.published = false
   end
   
   def published?
     self.published
+  end
+  
+  def category_name
+    self.category.name if self.category
+  end
+  
+  def set_status!(publish=nil, draft=nil)
+    if publish.blank?
+      self.unpublish
+    else
+      self.publish
+    end
   end
  
 end

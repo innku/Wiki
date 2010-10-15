@@ -38,7 +38,6 @@ $(function(){
     return false;
   });
   
-
   
   $("#article_name, #article_description, #article_content").blur(function(){
 	if ($(this).val() != ""){
@@ -49,9 +48,6 @@ $(function(){
   $("#article_category_id").change(function(){
       call_save_article()
   });
-
-
-   
 });
 
 function save_article(){
