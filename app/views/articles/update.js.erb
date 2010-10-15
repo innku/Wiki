@@ -1,1 +1,3 @@
-$("div#saved span").html('<%= time_ago_in_words(@article.updated_at, true)%>');
+$("#errorExplanation").slideUp().remove();
+
+$("div#saved").html('Guardado: <%= time_ago_in_words(@article.updated_at, true)%>');

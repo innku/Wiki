@@ -33,14 +33,10 @@
       <%= tags_hidden_fields(@article) %>
     </div>
   </div>
-  
-  <div class="field">
-    <%= f.label :published, t('.publish') %>
-    <%= f.check_box :published %>
-  </div>
 
   <div class="actions">
-    <%= f.submit t('.save_article') %>
+    <%= f.submit t('.save_draft'), :name => "draft" %>
+    <%= f.submit t('.save_and_publish'), :name => "publish" %>
   </div>
 <% end %>
 

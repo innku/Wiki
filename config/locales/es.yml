@@ -49,9 +49,10 @@ es:
               
   articles:
     form:
-      style_guide:    "Mostrar guia de estilos"
-      save_article:   "Guardar Articulo"
-      publish:        "¿Desea publicar este artículo?"
+      style_guide:      "Mostrar guia de estilos"
+      save_draft:       "Guardar Borrador"
+      save_and_publish: "Publicar"
+      publish:          "¿Desea publicar este artículo?"
         
     new:
       new_article:    "Articulo Nuevo"
