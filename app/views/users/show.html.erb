@@ -5,6 +5,6 @@
     <%= current_user.email %>
 </div>
 <br />
-<%= link_to t(:edit_password), edit_user_password_path %>
+<%= link_to t(:edit_password), 'users/edit' %>
 
 <%= render :partial => "user_articles"  %>
