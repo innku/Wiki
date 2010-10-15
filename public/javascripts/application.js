@@ -1,6 +1,19 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 timer_is_on = 0
+
+
+$(document).ready(function() {
+	
+	$("a#preview").fancybox({
+		'width'			: '90%',
+		'height'		: '90%',
+		'titleShow'		: false,
+		'transitionIn'	: 'elastic',
+		'transitionOut'	: 'elastic',
+		'type'			: 'iframe'
+	});
+});
   
 $(function(){
   
@@ -28,7 +41,7 @@ $(function(){
 
   
   $("#article_name, #article_description, #article_content").blur(function(){
-    if ($(this).val() != ""){
+	if ($(this).val() != ""){
       call_save_article()
     }
   });
@@ -36,9 +49,9 @@ $(function(){
   $("#article_category_id").change(function(){
       call_save_article()
   });
-  
-  
-  
+
+
+   
 });
 
 function save_article(){

@@ -19,6 +19,15 @@ class UsersController < ApplicationController
   def show
   end
   
+  def update
+    
+    if current_user.update_attributes(params[:user])
+        redirect_to(current_user, :notice => 'Your password has been changed')
+      else
+        render :action => "edit" 
+    end
+  end
+  
   private 
   def find_user
     @user = current_user

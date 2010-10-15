@@ -23,4 +23,16 @@ module ArticlesHelper
     content_tag(:ul, list_elements, :id => "textileGuide")
   end
   
+  def link_to_preview(article, options={})
+    options = {:id => "preview" , :class => "smallbutton"}
+    if article.new_record?
+      options[:style] = "display: none;"
+      link_path = "#"
+    else
+      link_path = article_path(article)
+    end
+    
+    link_to t(:preview), link_path, options
+  end
+  
 end
