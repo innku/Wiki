@@ -15,7 +15,7 @@
 	  
 	  <%= link_to_preview(@article) %>
 	<br />
-	<div id="togglebox" class="box">
+	<div id="togglebox" class="box" style="display: none;">
 		<%= render_textile_design_guide %>
 	</div>
 	<br />
@@ -49,5 +49,4 @@
   <% end %>
   
   $("input#tag").autocomplete({source: tags})
-  $('#togglebox').toggle(0);
 </script>

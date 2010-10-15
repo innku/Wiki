@@ -17,7 +17,9 @@
   </ul>
 </div>
 
-<% if can? :modify, @article %>
-  <%= link_to t(:edit), edit_article_path(@article) %> |
-  <%= link_to t(:destroy), article_path(@article), :method => :delete, :confirm => t(:sure) %>
+<% unless params[:lightbox] %>
+  <% if can? :modify, @article %>
+    <%= link_to t(:edit), edit_article_path(@article) %> |
+    <%= link_to t(:destroy), article_path(@article), :method => :delete, :confirm => t(:sure) %>
+  <% end %>
 <% end %>

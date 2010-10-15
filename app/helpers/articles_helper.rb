@@ -38,7 +38,7 @@ module ArticlesHelper
       options[:style] = "display: none;"
       link_path = "#"
     else
-      link_path = article_path(article)
+      link_path = article_path(article, :lightbox => true)
     end
     
     link_to t(:preview), link_path, options

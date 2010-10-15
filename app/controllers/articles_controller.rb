@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article.increase_count!
+    render :layout => "lightbox" if params[:lightbox]
   end
 
   def new

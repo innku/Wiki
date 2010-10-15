@@ -4,6 +4,7 @@
   form.append("<input type='hidden' name='_method' value='put'/>");
   
   $("#errorExplanation").slideUp('slow', function(){ $(this).remove() })
+  $("a#preview").show().attr("href", "<%= article_path(@article, :lightbox => true) %>")
 
   $("div#saved").html('<%= saved_timestamp(@article) %>');
 <% end %>
