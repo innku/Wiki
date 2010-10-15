@@ -1,6 +1,6 @@
 <div class="form_header">
   <h1 class="form"><%= t('.new_article')%></h1>
-  <div id="saved">No se ha guardado</div>
+  <div id="saved"><%= saved_timestamp(@article) %></div>
 </div>
 
 <div class="content">

@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
         format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
         format.js {}
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "edit" }
         format.js
       end
     end

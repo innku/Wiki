@@ -23,4 +23,13 @@ module ArticlesHelper
     content_tag(:ul, list_elements, :id => "textileGuide")
   end
   
+  def saved_timestamp(article)
+    if article.new_record?
+      text = "No se ha guardado"
+    else
+      text = "Guardado: " + content_tag(:span, time_ago_in_words(article.updated_at, true))
+    end
+    return text.html_safe
+  end
+  
 end

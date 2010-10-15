@@ -3,7 +3,7 @@
   form.attr("action", "/articles/<%= @article.id %>");
   form.append("<input type='hidden' name='_method' value='put'/>");
   
-  $("#errorExplanation").slideUp().remove();
+  $("#errorExplanation").slideUp('slow', function(){ $(this).remove() })
 
-  $("div#saved").html('Guardado: <span><%= time_ago_in_words(@article.updated_at, true)%></span>');
+  $("div#saved").html('<%= saved_timestamp(@article) %>');
 <% end %>
