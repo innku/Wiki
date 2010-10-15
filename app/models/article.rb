@@ -39,5 +39,9 @@ class Article < ActiveRecord::Base
   def published?
     self.published
   end
+  
+  def category_name
+    self.category.name if self.category
+  end
  
 end

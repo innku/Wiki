@@ -77,7 +77,40 @@ es:
       view_articles:      "Ver articulos"
     show:
       view_categories:    "Ver categorias"
-            
+  
+  
+  activerecord:
+    models:
+      article:            "Articulo"
+      user:               "Usuario"
+      category:           "Categoria"
+    attributes:
+      article:
+        name:             "Nombre"
+        description:      "Descripción"
+        content:          "Contenido"
+        category:         "Categoría"
+        this:             "este"
+      user:
+        email:            "Correo Electrónico"
+        this:             "este"
+        
+    errors:
+      messages:
+        inclusion:    "no está incluido en la lista"
+        blank:        "no puede quedar en blanco"
+        too_short:    "muy corta"
+        confirmation: "no coincide con la confirmación"
+        record_invalid: "el registro es inválido"
+        taken:        "ya está tomado, por favor elegir uno distinto"
+        
+  errors: 
+    template:
+      body:         "Hay problemas con los siguientes campos:"
+      header:
+        one:        "1 error ha impedido que %{this} %{model} se guarde"
+        other:      "%{count} errores han impedido que %{this} %{model} se guarde"
+  
   datetime:
     distance_in_words:
       about_x_hours:
