@@ -5,7 +5,7 @@
 </div>
 
 <div class="content">
-  <%= redcloth(@article.content) %>
+  <%= redcloth(coderay(@article.content).html_safe) %>
 </div>
 
 <div class="box tags">
