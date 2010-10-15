@@ -32,11 +32,6 @@ $(function(){
     }
   });
   
-  $('a#preview').click(function() {
-     var form = $("form#article_form");
-     $.post(form.attr("action"), form.serialize(), null, "script");
-   });
-  
   $("#article_category_id").change(function(){
       call_save_article()
   });
@@ -47,7 +42,8 @@ $(function(){
 		'titleShow'		: false,
 		'transitionIn'	: 'elastic',
 		'transitionOut'	: 'elastic',
-		'type'			: 'iframe'
+		'type'			: 'iframe',
+		'onStart'   : update_article()
 	});
 });
 
