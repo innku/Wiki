@@ -32,19 +32,25 @@ $(function(){
     }
   });
   
+  $("a#preview").click(function(){
+    var form = $("form#article_form");
+    $.post(form.attr("action"), form.serialize(), function(data){
+      $.fancybox({
+    		'width'			: '90%',
+    		'height'		: '90%',
+    		'titleShow'		: false,
+    		'transitionIn'	: 'elastic',
+    		'transitionOut'	: 'elastic',
+    		'type'			: 'iframe',
+    		'href'      : $("a#preview").attr("href")
+    	})
+    }, "script");
+    return false;
+  });
+  
   $("#article_category_id").change(function(){
       call_save_article()
   });
-  
-  $("a#preview").fancybox({
-		'width'			: '90%',
-		'height'		: '90%',
-		'titleShow'		: false,
-		'transitionIn'	: 'elastic',
-		'transitionOut'	: 'elastic',
-		'type'			: 'iframe',
-		'onStart'   : update_article()
-	});
 });
 
 function save_article(){
