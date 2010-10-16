@@ -2,7 +2,6 @@
 // This file is automatically included by javascript_include_tag :defaults
 timer_is_on = 0
 
-
 $(document).ready(function() {
 	
 	$("a#preview").fancybox({
@@ -16,7 +15,7 @@ $(document).ready(function() {
 });
   
 $(function(){
-  
+ 
   $("a#add_tag").click(function(){
    input = $("input#tag")
    value = input.val();
@@ -40,6 +39,7 @@ $(function(){
   
   
   $("#article_name, #article_description, #article_content").blur(function(){
+	alert('wasssup')
 	if ($(this).val() != ""){
       call_save_article()
     }
@@ -47,6 +47,12 @@ $(function(){
   
   $("#article_category_id").change(function(){
       call_save_article()
+  });
+
+  $('a#preview').click(function() {
+    var form = $("form#article_form");
+	$.post(form.attr("action"), form.serialize(), null, "script");
+    
   });
 });
 
