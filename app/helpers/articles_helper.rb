@@ -23,13 +23,22 @@ module ArticlesHelper
     content_tag(:ul, list_elements, :id => "textileGuide")
   end
   
+  def saved_timestamp(article)
+    if article.new_record?
+      text = "No se ha guardado"
+    else
+      text = "Guardado: " + content_tag(:span, time_ago_in_words(article.updated_at, true))
+    end
+    return text.html_safe
+  end
+  
   def link_to_preview(article, options={})
     options = {:id => "preview" , :class => "smallbutton"}
     if article.new_record?
       options[:style] = "display: none;"
       link_path = "#"
     else
-      link_path = article_path(article)
+      link_path = article_path(article, :lightbox => true)
     end
     
     link_to t(:preview), link_path, options

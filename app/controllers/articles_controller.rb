@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article.increase_count!
+    render :layout => "lightbox" if params[:lightbox]
   end
 
   def new
@@ -39,7 +40,7 @@ class ArticlesController < ApplicationController
         format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
         format.js {}
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "edit" }
         format.js
       end
     end

@@ -1,6 +1,6 @@
 <div class="form_header">
   <h1 class="form"><%= t('.edit_article')%></h1>
-  <div id="saved">Guardado: <span><%= time_ago_in_words(@article.updated_at, true) %></span></div>
+  <div id="saved"><%= saved_timestamp(@article) %></div>
 </div>
 
 <div class="content">
