@@ -92,5 +92,7 @@ function call_save_article(){
 
 function update_article(){
   var form = $("form#article_form");
-  $.post(form.attr("action"), form.serialize(), null, "script");
+  if (form.html() !== null) {
+    $.post(form.attr("action"), form.serialize(), null, "script");
+  }
 }
