@@ -94,8 +94,10 @@ es:
         category:         "Categoría"
         this:             "este"
       user:
-        email:            "Correo Electrónico"
-        this:             "este"
+        email:                  "Correo Electrónico"
+        this:                   "este"
+        password:               "Contraseña"
+        password_confirmation:  "Confirmación de Contraseña"
         
     errors:
       messages:
