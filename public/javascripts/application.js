@@ -52,7 +52,6 @@ $(function(){
   $("#article_category_id").change(function(){
       call_save_article()
   });
-<<<<<<< HEAD
 
   $('a#preview').click(function() {
     var form = $("form#article_form");
@@ -69,8 +68,6 @@ $(function(){
 		'type'			: 'iframe',
 		'onStart'   : update_article()
 	});
-=======
->>>>>>> d9a213356f19908ac6529ca8b73c8bb76403663c
 });
 
 function save_article(){
@@ -95,5 +92,7 @@ function call_save_article(){
 
 function update_article(){
   var form = $("form#article_form");
-  $.post(form.attr("action"), form.serialize(), null, "script");
+  if (form.html() !== null) {
+    $.post(form.attr("action"), form.serialize(), null, "script");
+  }
 }

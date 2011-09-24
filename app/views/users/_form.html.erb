@@ -1,5 +1,5 @@
-
 <%= form_for(@user) do |f| %>
+  <%= render "/layouts/error_messages", :target => @user %>
 
   <p><%= f.label :email %><br />
   <%= f.text_field :email %></p>

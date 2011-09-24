@@ -1,11 +1,13 @@
 <% if @article.valid? %>
   var form = $("form#article_form");
   form.append("<input type='hidden' name='_method' value='put'/>");
-  $("div#saved").html('Guardado: <span><%= time_ago_in_words(@article.updated_at, true)%></span>');
-<% end %>
+  form.attr("action", "/articles/<%= @article.cached_slug %>");
 
-<div id="name" class >
-</div>
+  $("div#saved").html('Guardado: <span><%= time_ago_in_words(@article.updated_at, true)%></span>');
+<% else %>
+  <div id="name" class >
+  </div>
+
   $("#errorExplanation").slideUp('slow', function(){ $(this).remove() })
   $("a#preview").show().attr("href", "<%= article_path(@article, :lightbox => true) %>")
   $("div#saved").html('<%= saved_timestamp(@article) %>');

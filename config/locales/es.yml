@@ -34,7 +34,7 @@ es:
   
   home:
     index:
-      welcome:            "Bienvenido a el repositorio de conocimientos de Innku un lugar donde todos nosotros podemos compartir nuestro conocimiento si tienes algo que deseas compatir porque no"
+      welcome:            "Bienvenido al repositorio de conocimientos de Innku. Un lugar donde todos nosotros podemos compartir nuestro conocimiento. Si tienes algo que deseas compatir porque no"
       create_article:     "Creas un Articulo"
       search_article:     "Busca un articulo"
       welcome2:           "si tienes algun problema y no sabes como solucionarlo"
@@ -94,8 +94,10 @@ es:
         category:         "Categoría"
         this:             "este"
       user:
-        email:            "Correo Electrónico"
-        this:             "este"
+        email:                  "Correo Electrónico"
+        this:                   "este"
+        password:               "Contraseña"
+        password_confirmation:  "Confirmación de Contraseña"
         
     errors:
       messages:
