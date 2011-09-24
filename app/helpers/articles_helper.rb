@@ -19,6 +19,7 @@ module ArticlesHelper
     list_elements += content_tag(:li," %{color:red} => enclose text between percentage signs and indicate the color between brackets to get a colored text %{color:red} red text %")
     list_elements += content_tag(:li,"* bulleted list ")
     list_elements += content_tag(:li,"** 2-level bulleted list ")
+    list_elements += content_tag(:li,"<code lang='rhtml'></code> => enclose text between code tags to indicate code")
 
     content_tag(:ul, list_elements, :id => "textileGuide")
   end
