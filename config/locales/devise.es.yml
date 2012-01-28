@@ -23,6 +23,9 @@ es:
     passwords:
       send_instructions: 'Recibirás un email con instrucciones para cambiar tu contraseña en poco minutos.'
       updated: 'Tu contraseña ha sido modificada. Ya has accedido a tu cuenta.'
+      new:
+        new_password:    "¿Se te olvidó la contraseña?"
+        reset_password:  "Envíame las instrucciones para resetear mi contraseña"
     confirmations:
       send_instructions: 'Recibirás un email con instrucciones para confirmar tu cuenta en poco minutos.'
       confirmed: 'Tu cuenta ha sido confirmada. Ya has accedido a tu cuenta.'
@@ -43,3 +46,9 @@ es:
         subject: 'Instrucciones para cambiar tu contraseña'
       unlock_instructions:
         subject: 'Instrucciones para desbloquear tu cuenta'
+    shared:
+      links:
+        new_session:      "Inicia Sesión"
+        new_registration: "Crea tu Usuario"
+        no_confirmation:  "¿No recibiste instrucciones de confirmación?"
+        no_instruction:   "¿No recibiste las instrucciones para liberar la contraseña?"

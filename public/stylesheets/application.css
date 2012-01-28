@@ -283,3 +283,28 @@ form.small_form {
 .clear {
   clear:both;
 }
+
+table {
+  border:2px solid #999;
+  width: 80%;
+}
+
+table td, table th {
+  padding: 5px;
+  text-align:center;
+}
+
+table th {
+  font-size: 14px;
+  background-color: #ECE3D2;
+  color: #4d4d4d;
+  font-weight: bold;
+}
+
+table td {
+  border: 1px solid #CCC;
+}
+
+.action_links {
+  margin-top: 30px;
+}

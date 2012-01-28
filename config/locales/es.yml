@@ -13,9 +13,9 @@ es:
   destroy:        "Eliminar"
   access_denied:  "No estas autorizado para ver esta página"
   sure:           "¿Estas seguro que lo deseas eliminar?"
-  categories_link:  "Categorias"
+  categories_link:  "Categorías"
   edit_password:    "Cambiar contraseña"
-  draft_articles:   "Articulos en borrador"
+  draft_articles:   "Artículos en borrador"
   preview:          "Vista previa"
     
   layouts:
@@ -34,10 +34,10 @@ es:
   home:
     index:
       welcome:            "Bienvenido al repositorio de conocimientos de Innku. Un lugar donde todos nosotros podemos compartir nuestro conocimiento. Si tienes algo que deseas compatir porque no"
-      create_article:     "Creas un Articulo"
-      search_article:     "Busca un articulo"
+      create_article:     "Creas un Artículo"
+      search_article:     "Busca un artículo"
       welcome2:           "si tienes algun problema y no sabes como solucionarlo"
-      featured_articles:   "Articulos Destacados"
+      featured_articles:   "Artículos Destacados"
           
   devise:
     sessions:
@@ -45,11 +45,11 @@ es:
         remember_me:    "Recordarme"
     shared:
       links:
-        forgot:     "Olvidaste tu password?"
+        forgot:     "¿Olvidaste tu password?"
               
   articles:
     form:
-      style_guide:      "Mostrar guia de estilos"
+      style_guide:      "Mostrar guía de estilos"
       save_draft:       "Guardar Borrador"
       save_and_publish: "Publicar"
       publish:          "¿Desea publicar este artículo?"
@@ -60,24 +60,27 @@ es:
       edit_article:    "Editar Artículo"
     index:
       new_article:        "Crear articulo"
-      new_category:       "Crear categoria"
-      listing_articles:   "Articulos"
+      new_category:       "Crear categoría"
+      listing_articles:   "Artículos"
     show:
-      view_articles:      "Ver articulos"
+      view_articles:      "Ver artículos"
           
   categories:
     new:
-      new_category:       "Categoria nueva"
-      view_categories:    "Ver categorias"
+      new_category:       "Categoría nueva"
+      view_categories:    "Ver categorías"
     form:
-      create_category:    "Crear categoria"
+      create_category:    "Crear categoría"
     index:
-      categories:         "Categorias"
+      categories:         "Categorías"
       sure:               "Estas seguro"
-      new_category:       "Nueva categoria"
-      view_articles:      "Ver articulos"
+      new_category:       "Nueva categoría"
+      view_articles:      "Ver artículos"
     show:
-      view_categories:    "Ver categorias"
+      view_categories:    "Ver categorías"
+    edit:
+      edit_category:      "Editar Categoría"
+      show_category:      "Ver Categoría"
   users:
     new:
       new_user:           "Nuevo Usuario"
@@ -86,13 +89,15 @@ es:
       update_user:        "Actualizar Datos"
     form:
       create_user:        "Crear Usuario"
+    show:
+      show_user:          "Perfil de Usuario"
   
   
   activerecord:
     models:
-      article:            "Articulo"
+      article:            "Artículo"
       user:               "Usuario"
-      category:           "Categoria"
+      category:           "Categoría"
     attributes:
       article:
         name:             "Nombre"
@@ -138,8 +143,8 @@ es:
         one:          "hace %{count} minuto"
         other:        "hace %{count} minutos"
       x_days:
-        one:          "hace 1 dia"
-        other:        "hace %{count} dias"
+        one:          "hace 1 día"
+        other:        "hace %{count} días"
 
   date:
     formats:
@@ -157,5 +162,3 @@ es:
       long: "%d de %B, %Y %H:%M"
     am: "am"
     pm: "pm"
-            
-        
