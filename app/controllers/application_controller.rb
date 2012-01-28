@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
   end
   
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = t(:access_denied)
-    redirect_to root_url
+    if current_user
+      flash[:error] = t(:access_denied)
+      redirect_to root_url
+    else
+      redirect_to new_user_session_url
+    end
   end
 end

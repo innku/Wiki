@@ -1,5 +1,5 @@
-
-<%= form_for(@user) do |f| %>
+<%= form_for(@user, html: { class: "small_form"}) do |f| %>
+  <%= render "/layouts/error_messages", :target => @user %>
 
   <p><%= f.label :email %><br />
   <%= f.text_field :email %></p>
@@ -10,6 +10,6 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.submit "Sign up" %></p>
+  <p><%= f.submit t(".create_user") %> o <%= link_to "Cancelar", :back %></p>
 
 <% end %>

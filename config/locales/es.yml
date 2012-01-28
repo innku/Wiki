@@ -1,4 +1,3 @@
-
 es:
   user:           "Usuario"
   description:    "Descripcion"
@@ -13,12 +12,24 @@ es:
   destroy:        "Eliminar"
   access_denied:  "No estas autorizado para ver esta página"
   sure:           "¿Estas seguro que lo deseas eliminar?"
-  categories_link:  "Categorias"
-  edit_password:    "Cambiar password"
-  draft_articles:   "Articulos en borrador"
+  categories_link:  "Categorías"
+  edit_password:    "Cambiar contraseña"
+  draft_articles:   "Artículos en borrador"
   preview:          "Vista previa"
-    
-    
+
+  notice:
+    article:
+      created_successfully: "El artículo fue creado exitosamente."
+      updated_successfully: "El artículo fue modificado exitosamente."
+      deleted_successfully: "El artículo fue eliminado exitosamente."
+    category:
+      created_successfully: "La categoría fue creada exitosamente."
+      updated_successfully: "La categoría fue modificada exitosamente."
+      deleted_successfully: "La categoría fue eliminada exitosamente."
+    user:
+      created_successfully: "El usuario fue creado exitosamente."
+      updated_successfully: "El cambio de contraseña fue cambiado exitosamente."
+
   layouts:
     application:
       not_you:            "No es usted?"
@@ -27,18 +38,18 @@ es:
       log_out:            "Salir"
       sign_in:            "Entrar"
       profile:            "Perfil"
+      new_article:        "Crear artículo"
     sidemenu:
       search:             "Buscar"
-      search_article:     "Buscar un articulo"
-      new_article:         "Publicar nuevo articulo"
+      search_article:     "Buscar un artículo"
   
   home:
     index:
-      welcome:            "Bienvenido a el repositorio de conocimientos de Innku un lugar donde todos nosotros podemos compartir nuestro conocimiento si tienes algo que deseas compatir porque no"
-      create_article:     "Creas un Articulo"
-      search_article:     "Busca un articulo"
+      welcome:            "Bienvenido al repositorio de conocimientos de Innku. Un lugar donde todos nosotros podemos compartir nuestro conocimiento. Si tienes algo que deseas compatir porque no"
+      create_article:     "Creas un Artículo"
+      search_article:     "Busca un artículo"
       welcome2:           "si tienes algun problema y no sabes como solucionarlo"
-      featured_articles:   "Articulos Destacados"
+      featured_articles:   "Artículos Destacados"
           
   devise:
     sessions:
@@ -46,11 +57,11 @@ es:
         remember_me:    "Recordarme"
     shared:
       links:
-        forgot:     "Olvidaste tu password?"
+        forgot:     "¿Olvidaste tu password?"
               
   articles:
     form:
-      style_guide:      "Mostrar guia de estilos"
+      style_guide:      "Mostrar guía de estilos"
       save_draft:       "Guardar Borrador"
       save_and_publish: "Publicar"
       publish:          "¿Desea publicar este artículo?"
@@ -61,31 +72,44 @@ es:
       edit_article:    "Editar Artículo"
     index:
       new_article:        "Crear articulo"
-      new_category:       "Crear categoria"
-      listing_articles:   "Articulos"
+      new_category:       "Crear categoría"
+      listing_articles:   "Artículos"
     show:
-      view_articles:      "Ver articulos"
+      view_articles:      "Ver artículos"
           
   categories:
     new:
-      new_category:       "Categoria nueva"
-      view_categories:    "Ver categorias"
+      new_category:       "Categoría nueva"
+      view_categories:    "Ver categorías"
     form:
-      create_category:    "Crear categoria"
+      create_category:    "Enviar"
     index:
-      categories:         "Categorias"
+      categories:         "Categorías"
       sure:               "Estas seguro"
-      new_category:       "Nueva categoria"
-      view_articles:      "Ver articulos"
+      new_category:       "Nueva categoría"
+      view_articles:      "Ver artículos"
     show:
-      view_categories:    "Ver categorias"
+      view_categories:    "Ver categorías"
+    edit:
+      edit_category:      "Editar Categoría"
+      show_category:      "Ver Categoría"
+  users:
+    new:
+      new_user:           "Nuevo Usuario"
+    edit:
+      edit_user:          "Cambiar Contraseña"
+      update_user:        "Actualizar Datos"
+    form:
+      create_user:        "Crear Usuario"
+    show:
+      show_user:          "Perfil de Usuario"
   
   
   activerecord:
     models:
-      article:            "Articulo"
+      article:            "Artículo"
       user:               "Usuario"
-      category:           "Categoria"
+      category:           "Categoría"
     attributes:
       article:
         name:             "Nombre"
@@ -94,18 +118,21 @@ es:
         category:         "Categoría"
         this:             "este"
       user:
-        email:            "Correo Electrónico"
-        this:             "este"
+        email:                  "Correo Electrónico"
+        this:                   "este"
+        password:               "Contraseña"
+        password_confirmation:  "Confirmación de Contraseña"
         
     errors:
       messages:
-        inclusion:    "no está incluido en la lista"
-        blank:        "no puede quedar en blanco"
-        too_short:    "muy corta"
-        confirmation: "no coincide con la confirmación"
+        inclusion:      "no está incluido en la lista"
+        blank:          "no puede quedar en blanco"
+        too_short:      "muy corta"
+        confirmation:   "no coincide con la confirmación"
         record_invalid: "el registro es inválido"
-        taken:        "ya está tomado, por favor elegir uno distinto"
-        
+        invalid:        "es inválido"
+        taken:          "ya está tomado, por favor elegir uno distinto"
+
   errors: 
     template:
       body:         "Hay problemas con los siguientes campos:"
@@ -129,8 +156,8 @@ es:
         one:          "hace %{count} minuto"
         other:        "hace %{count} minutos"
       x_days:
-        one:          "hace 1 dia"
-        other:        "hace %{count} dias"
+        one:          "hace 1 día"
+        other:        "hace %{count} días"
 
   date:
     formats:
@@ -148,5 +175,3 @@ es:
       long: "%d de %B, %Y %H:%M"
     am: "am"
     pm: "pm"
-            
-        
