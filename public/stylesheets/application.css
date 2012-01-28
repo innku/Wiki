@@ -284,24 +284,24 @@ form.small_form {
   clear:both;
 }
 
-table {
+table.category {
   border:2px solid #999;
   width: 80%;
 }
 
-table td, table th {
+table.category td, table.category th {
   padding: 5px;
   text-align:center;
 }
 
-table th {
+table.category th {
   font-size: 14px;
   background-color: #ECE3D2;
   color: #4d4d4d;
   font-weight: bold;
 }
 
-table td {
+table.category td {
   border: 1px solid #CCC;
 }
 
