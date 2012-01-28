@@ -11,17 +11,17 @@
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    	
-  	<% if user_signed_in? %>
-  		<td><%= link_to t(:edit), edit_category_path(category) %></td>
-  		<td><%= link_to t(:destroy), category, :confirm => 'Are you sure?', :method => :delete %></td>
-  	<% end %>  
+
+    <% if user_signed_in? %>
+      <td><%= link_to t(:edit), edit_category_path(category) %></td>
+      <td><%= link_to t(:destroy), category, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to t('.new_category'), new_category_path %>
+<%= link_to t('.new_category'), new_category_path, class: "button" %>
 <%= link_to t('.view_articles'), articles_path %>
 

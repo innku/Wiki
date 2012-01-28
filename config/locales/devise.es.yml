@@ -17,6 +17,9 @@ es:
     sessions:
       signed_in: 'Has ingresado correctamente.'
       signed_out: 'Has salido correctamente.'
+      new:
+        new_session:    "Inicia Sesión"
+        create_session: "Entrar"
     passwords:
       send_instructions: 'Recibirás un email con instrucciones para cambiar tu contraseña en poco minutos.'
       updated: 'Tu contraseña ha sido modificada. Ya has accedido a tu cuenta.'

@@ -14,10 +14,9 @@ es:
   access_denied:  "No estas autorizado para ver esta página"
   sure:           "¿Estas seguro que lo deseas eliminar?"
   categories_link:  "Categorias"
-  edit_password:    "Cambiar password"
+  edit_password:    "Cambiar contraseña"
   draft_articles:   "Articulos en borrador"
   preview:          "Vista previa"
-    
     
   layouts:
     application:
@@ -27,10 +26,10 @@ es:
       log_out:            "Salir"
       sign_in:            "Entrar"
       profile:            "Perfil"
+      new_article:        "Crear artículo"
     sidemenu:
       search:             "Buscar"
-      search_article:     "Buscar un articulo"
-      new_article:         "Publicar nuevo articulo"
+      search_article:     "Buscar un artículo"
   
   home:
     index:
@@ -79,6 +78,14 @@ es:
       view_articles:      "Ver articulos"
     show:
       view_categories:    "Ver categorias"
+  users:
+    new:
+      new_user:           "Nuevo Usuario"
+    edit:
+      edit_user:          "Cambiar Contraseña"
+      update_user:        "Actualizar Datos"
+    form:
+      create_user:        "Crear Usuario"
   
   
   activerecord:
