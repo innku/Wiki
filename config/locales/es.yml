@@ -82,7 +82,7 @@ es:
       new_category:       "Categoría nueva"
       view_categories:    "Ver categorías"
     form:
-      create_category:    "Crear categoría"
+      create_category:    "Enviar"
     index:
       categories:         "Categorías"
       sure:               "Estas seguro"
