@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
-  
+
   load_and_authorize_resource
-  
+
   def index
     @articles = Article.search(params[:q])
   end
@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
     @article.set_status!(params[:publish], params[:draft])
     respond_to do |format|
       if @article.save
-        format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
+        format.html { redirect_to(@article, :notice => I18n.t("notice.article.created_successfully")) }
         format.js {}
       else
         format.html { render :action => "new" }
@@ -34,10 +34,10 @@ class ArticlesController < ApplicationController
   def update
     params[:article][:tag_list] ||= []
     @article.set_status!(params[:publish], params[:draft])
-    
+
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
+        format.html { redirect_to(@article, :notice => I18n.t("notice.article.updated_successfully")) }
         format.js {}
       else
         format.html { render :action => "edit" }
@@ -48,6 +48,6 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to(@article, :notice => 'Article was successfully deleted.')
+    redirect_to(@article, :notice => I18n.t("notice.article.deleted_successfully"))
   end
 end

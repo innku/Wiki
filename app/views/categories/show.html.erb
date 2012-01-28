@@ -1,8 +1,10 @@
+<h1>Información de <%= @category.name %></h1>
+
 <p>
   <b><%= t(:name)%></b>
   <%= @category.name %>
 </p>
 
 
-<%= link_to t(:show), edit_category_path(@category) %> |
+<%= link_to t(:edit), edit_category_path(@category) %> |
 <%= link_to t('.view_categories'), categories_path %>

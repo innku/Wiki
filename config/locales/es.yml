@@ -16,7 +16,20 @@ es:
   edit_password:    "Cambiar contraseña"
   draft_articles:   "Artículos en borrador"
   preview:          "Vista previa"
-    
+
+  notice:
+    article:
+      created_successfully: "El artículo fue creado exitosamente."
+      updated_successfully: "El artículo fue modificado exitosamente."
+      deleted_successfully: "El artículo fue eliminado exitosamente."
+    category:
+      created_successfully: "La categoría fue creada exitosamente."
+      updated_successfully: "La categoría fue modificada exitosamente."
+      deleted_successfully: "La categoría fue eliminada exitosamente."
+    user:
+      created_successfully: "El usuario fue creado exitosamente."
+      updated_successfully: "El cambio de contraseña fue cambiado exitosamente."
+
   layouts:
     application:
       not_you:            "No es usted?"
@@ -112,13 +125,14 @@ es:
         
     errors:
       messages:
-        inclusion:    "no está incluido en la lista"
-        blank:        "no puede quedar en blanco"
-        too_short:    "muy corta"
-        confirmation: "no coincide con la confirmación"
+        inclusion:      "no está incluido en la lista"
+        blank:          "no puede quedar en blanco"
+        too_short:      "muy corta"
+        confirmation:   "no coincide con la confirmación"
         record_invalid: "el registro es inválido"
-        taken:        "ya está tomado, por favor elegir uno distinto"
-        
+        invalid:        "es inválido"
+        taken:          "ya está tomado, por favor elegir uno distinto"
+
   errors: 
     template:
       body:         "Hay problemas con los siguientes campos:"

@@ -13,7 +13,7 @@
 
     <% if user_signed_in? %>
       <td><%= link_to t(:edit), edit_category_path(category) %></td>
-      <td><%= link_to t(:destroy), category, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to t(:destroy), category, :confirm => '¿Estás seguro?', :method => :delete %></td>
     <% end %>
   </tr>
 <% end %>

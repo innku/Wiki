@@ -12,13 +12,13 @@ class Ability
       article.user == user
     end
     
-    if !user.new_record?
+    unless user.new_record?
       can :create, Article
       can :manage, User do |u|
         u == user
       end
     end
-    
+
     if user.admin?
       can :manage, Category
       can :manage, Article

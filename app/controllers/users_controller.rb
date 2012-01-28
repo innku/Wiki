@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to(@user, :notice => 'User was successfully created.') 
+      redirect_to(root_url, :notice => I18n.t("notice.user.created_successfully"))
     else
       render :action => "new"
     end
@@ -20,15 +20,15 @@ class UsersController < ApplicationController
   end
   
   def update
-    
     if current_user.update_attributes(params[:user])
-        redirect_to(current_user, :notice => 'Your password has been changed')
+        redirect_to(current_user, :notice => I18n.t("notice.user.updated_successfully"))
       else
         render :action => "edit" 
     end
   end
   
   private 
+
   def find_user
     @user = current_user
   end
