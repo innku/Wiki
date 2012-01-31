@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
+    sign_in users(:one)
     @article = articles(:one)
   end
 

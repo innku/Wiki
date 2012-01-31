@@ -14,14 +14,14 @@ ActiveRecord::Schema.define(:version => 20101014222055) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
-    t.text     "description"
-    t.text     "content"
+    t.text     "description", :limit => 255
+    t.text     "content",     :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
     t.integer  "user_id"
-    t.integer  "hit_count",   :default => 0
-    t.boolean  "published",   :default => false
+    t.integer  "hit_count",                  :default => 0
+    t.boolean  "published",                  :default => false
     t.string   "cached_slug"
   end
 
