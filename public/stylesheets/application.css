@@ -138,8 +138,9 @@ input[type=submit], a.button {
   margin-top: 18px;
   border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3FB6BA', endColorstr='#33989D'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#3FB6BA), to(#33989D)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #3FB6BA,  #33989D); /* for firefox 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#3FB6BA), to(#33989D)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #3FB6BA,  #33989D); /* for firefox 3.6+ */
+  cursor:pointer;
 }
 
 a.smallbutton{
