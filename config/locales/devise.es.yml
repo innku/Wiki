@@ -26,6 +26,9 @@ es:
       new:
         new_password:    "¿Se te olvidó la contraseña?"
         reset_password:  "Envíame las instrucciones para resetear mi contraseña"
+      edit:
+        edit_password:    "Actualiza tu password"
+        update_password:  "Actualizar password"
     confirmations:
       send_instructions: 'Recibirás un email con instrucciones para confirmar tu cuenta en poco minutos.'
       confirmed: 'Tu cuenta ha sido confirmada. Ya has accedido a tu cuenta.'
