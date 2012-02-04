@@ -2,9 +2,8 @@
 // This file is automatically included by javascript_include_tag :defaults
 timer_is_on = 0
 
-  
 $(function(){
- 
+
   $("a#add_tag").click(function(){
    input = $("input#tag")
    value = input.val();

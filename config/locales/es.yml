@@ -29,6 +29,8 @@ es:
     user:
       created_successfully: "El usuario fue creado exitosamente."
       updated_successfully: "El cambio de contraseña fue cambiado exitosamente."
+  confirm:
+    confirm_delete:         "¿Estás seguro que deseas eliminar el artículo?"
 
   layouts:
     application:
@@ -42,7 +44,7 @@ es:
     sidemenu:
       search:             "Buscar"
       search_article:     "Buscar un artículo"
-  
+
   home:
     index:
       welcome:            "Bienvenido al repositorio de conocimientos de Innku. Un lugar donde todos nosotros podemos compartir nuestro conocimiento. Si tienes algo que deseas compatir porque no"
@@ -50,7 +52,7 @@ es:
       search_article:     "Busca un artículo"
       welcome2:           "si tienes algun problema y no sabes como solucionarlo"
       featured_articles:   "Artículos Destacados"
-          
+
   devise:
     sessions:
       new:
@@ -58,14 +60,14 @@ es:
     shared:
       links:
         forgot:     "¿Olvidaste tu password?"
-              
+
   articles:
     form:
       style_guide:      "Mostrar guía de estilos"
       save_draft:       "Guardar Borrador"
       save_and_publish: "Publicar"
       publish:          "¿Desea publicar este artículo?"
-        
+
     new:
       new_article:    "Articulo Nuevo"
     edit:
@@ -76,7 +78,7 @@ es:
       listing_articles:   "Artículos"
     show:
       view_articles:      "Ver artículos"
-          
+
   categories:
     new:
       new_category:       "Categoría nueva"
@@ -103,8 +105,7 @@ es:
       create_user:        "Crear Usuario"
     show:
       show_user:          "Perfil de Usuario"
-  
-  
+
   activerecord:
     models:
       article:            "Artículo"

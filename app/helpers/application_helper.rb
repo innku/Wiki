@@ -15,9 +15,9 @@ module ApplicationHelper
     if can?(:modify, article) && request.fullpath != root_path
       html << (link_to t(:edit), edit_article_path(article))
       html << " | "
-  		html << (link_to t(:destroy), article, :confirm => 'Are you sure?', :method => :delete)
-  	end
-  	return html
+      html << (link_to t(:destroy), article, :confirm => t(".confirm.confirm_delete"), :method => :delete)
+    end
+    return html
   end
-  
+
 end
