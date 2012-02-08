@@ -22,24 +22,24 @@
               <%= (link_to(t(:categories_link), categories_path) + " |") if can? :manage, Category %>
               <%= link_to t('.log_out'), destroy_user_session_path %></p>
           <% else %>
-            <p><%= t('.guest')%> <%= link_to t('.sign_in'), new_user_session_path %></p>
+            <div><%= t('.guest')%> <%= link_to t('.sign_in'), new_user_session_path %></div>
           <% end %>
         </div>
       </div><!--/hd-->
-      
+
       <div id="bd">
         <div id="yui-main"> 
           <div class="yui-b"><!--yui-b main column-->
-            
+
             <% flash.each do |name, message| %>
               <div id="<%= name %>" class="flash"><%= message %></div>
             <% end %>
-            
+
             <%= yield %>
           </div><!--/yui-b main column-->
         </div>
 
-        <div class="yui-b"><!--yui-b secondary column-->
+        <div id="yui-s" class="yui-b"><!--yui-b secondary column-->
           <%= render :partial => "/layouts/sidemenu"  %>
         </div><!--/yui-b secondary column-->
 

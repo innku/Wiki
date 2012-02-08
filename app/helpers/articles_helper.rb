@@ -20,6 +20,7 @@ module ArticlesHelper
     list_elements += content_tag(:li,"* bulleted list ")
     list_elements += content_tag(:li,"** 2-level bulleted list ")
     list_elements += content_tag(:li,'<code lang="rhtml"></code> => enclose text between code tags to indicate code')
+    list_elements += content_tag(:li,'p(note) => Agrega una nota al proyecto')
 
     content_tag(:ul, list_elements, :id => "textileGuide")
   end

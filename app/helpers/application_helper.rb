@@ -15,9 +15,13 @@ module ApplicationHelper
     if can?(:modify, article) && request.fullpath != root_path
       html << (link_to t(:edit), edit_article_path(article))
       html << " | "
-      html << (link_to t(:destroy), article, :confirm => t(".confirm.confirm_delete"), :method => :delete)
+      html << (link_to t(:destroy), article, :confirm => t("confirm.confirm_delete"), :method => :delete)
     end
     return html
   end
 
+  def active_tab(title, path)
+    css_class = current_page?(path) ? "active" : ""
+    link_to title, path, :class => css_class
+  end
 end

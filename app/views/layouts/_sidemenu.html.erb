@@ -10,7 +10,7 @@
     <h1><%= category.name %></h1>
     <ul>
       <% category.published.each do |article| %>
-        <li><%= link_to article.name, article %></li>
+        <li><%= active_tab article.name, article_path(article) %></li>
       <% end %>
     </ul>
   <% end %>

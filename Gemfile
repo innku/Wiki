@@ -9,3 +9,8 @@ gem 'cancan'
 gem "friendly_id", "~> 3.1"
 gem "coderay"
 gem 'sqlite3'
+
+group :development do
+  gem "livereload"
+  gem "rb-inotify"
+end

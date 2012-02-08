@@ -1,21 +1,21 @@
 <div class="header">
-  <div class="category"><span>Categoria &raquo;</span> <%= @article.category_name %></div>
   <h1 class="title"><%= @article.name %></h1>	
-  <div class="description"><%= redcloth(@article.description) %></div>
+  <div class="description">
+    <%= redcloth(@article.description) %>
+    <div class="tags">
+      <ul>
+        <% @article.tag_list.each do |tag| %>
+          <li><%= tag %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="content">
   <%= redcloth(coderay(@article.content).html_safe) %>
 </div>
 
-<div class="box tags">
-  <h2>Etiquetas:</h2>
-  <ul>
-    <% @article.tag_list.each do |tag| %>
-      <li><%= tag %></li>
-    <% end %>
-  </ul>
-</div>
 
 <% unless params[:lightbox] %>
   <% if can? :modify, @article %>
