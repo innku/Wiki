@@ -21,8 +21,8 @@ body{text-align:left;}#ft{clear:both;}#doc,#doc2,#doc3,#doc4,.yui-t1,.yui-t2,.yu
 .yui-b{
   padding: 0px 10px;
 }
-
-#yui-s {
+.yui-t3 #yui-s {
+  width:24%;
   padding-left: 35px;
 }
 
@@ -215,7 +215,7 @@ div.description {
 .toparticle{
   background-color:#E8F9D6;
   padding:15px;
-  width:700px;
+  width:80%;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   margin-bottom: 15px;
