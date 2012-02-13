@@ -1,9 +1,10 @@
 <div id="search">
   <%= form_tag(articles_path, :method => 'get') do %>
     <%= text_field_tag :q, nil %>
-    <%= submit_tag "Buscar" %>
+    <%= submit_tag "", :class => "search" %>
   <% end %>
 </div>
+<div class="clear"></div>
 
 <div id="menu">
   <% @categories.each do |category| %>
