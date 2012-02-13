@@ -162,6 +162,7 @@ div#saved {
 form.user_new input[type=text], form.user_new input[type=password] {width: 260px;}
 
 input[type=submit], a.button {
+  cursor:pointer;
   background-color: #369C9E;
   color: #fff;
   font-size: 18px;
@@ -170,9 +171,8 @@ input[type=submit], a.button {
   margin-top: 18px;
   border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3FB6BA', endColorstr='#33989D'); /* for IE */
-  background: -webkit-gradient(linear, left top, left bottom, from(#3FB6BA), to(#33989D)); [> for webkit browsers <]
+  background: -webkit-gradient(linear, left top, left bottom, from(#3FB6BA), to(#33989D)); /* [> for webkit browsers <] */
   background: -moz-linear-gradient(top,  #3FB6BA,  #33989D); [> for firefox 3.6+ <]
-  cursor:pointer;
 }
 
 a.smallbutton{
@@ -354,13 +354,12 @@ table.category td {
 }
 
 #search input[type=submit].search {
-  background-color: #369C9E;
-  background-image:url(/images/search.png);
-  background:#369C9E url(/images/search.png) no-repeat center center;
+  margin:1px 0 0 4px; /* Because of float */
   padding:0;
-  margin:1px 0 0 4px; /* Because of floated form */
-  width:34px;
+  background-image:url(/images/search.png);
+  background-color: #369C9E;
   height:34px;
+  width:34px;
 }
 
 .clear {
