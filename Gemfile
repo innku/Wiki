@@ -15,7 +15,7 @@ group :development do
   gem "rb-inotify"
 end
 
-group :development, :test do
+group :test do
   gem 'redgreen'
   gem 'test-unit', '1.2.3'
 end
