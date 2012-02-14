@@ -10,6 +10,7 @@ class Article < ActiveRecord::Base
   
   scope :published, where({:published => true})
   scope :drafts, where({:published => false})
+  default_scope order("updated_at DESC")
   
   def increase_count!
     self.hit_count += 1
@@ -18,7 +19,7 @@ class Article < ActiveRecord::Base
   
   def self.search(query)
     if query.blank?
-      self.published
+      published
     else
       conditions = []
       conditions << sanitize_sql(["articles.name #{$like} ?", "%#{query}%"])
@@ -29,7 +30,7 @@ class Article < ActiveRecord::Base
       where(conditions.join(" OR ")).published
     end
   end
-  
+
   def publish
     self.published = true
   end
