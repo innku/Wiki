@@ -365,6 +365,10 @@ table.category td {
   clear: both;
 }
 
+#togglebox {
+  margin: 18px 0;
+}
+
 table#textile_guide {
   border:2px solid #999;
   width:100%;
