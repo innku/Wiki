@@ -14,3 +14,8 @@ group :development do
   gem "livereload"
   gem "rb-inotify"
 end
+
+group :development, :test do
+  gem 'redgreen'
+  gem 'test-unit', '1.2.3'
+end

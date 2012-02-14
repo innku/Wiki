@@ -6,23 +6,12 @@ module ArticlesHelper
       list_elements += content_tag(:li, content_tag(:span, tag_name) + content_tag(:a, "X", :href => "#") +
       content_tag(:input, nil, :type => "hidden", :value => tag_name, :name => "article[tag_list][]"))
     end
-    
+
     content_tag(:ul, list_elements, :id => "tag_list")
   end
   
   def render_textile_design_guide
-    list_elements = "".html_safe
-    list_elements += content_tag(:li,"* => enclose text between asterisks to get a bold text *bold text*")
-    list_elements += content_tag(:li,"_ => enclose text between underscores to get an Italic text  _Italic text_")
-    list_elements += content_tag(:li,"- => enclose text between hypens to get a strikethrough text -strikethrough text-")
-    list_elements += content_tag(:li," + => enclose text between plus signs to get a underlined text +underlined text+")
-    list_elements += content_tag(:li," %{color:red} => enclose text between percentage signs and indicate the color between brackets to get a colored text %{color:red} red text %")
-    list_elements += content_tag(:li,"* bulleted list ")
-    list_elements += content_tag(:li,"** 2-level bulleted list ")
-    list_elements += content_tag(:li,'<code lang="rhtml"></code> => enclose text between code tags to indicate code')
-    list_elements += content_tag(:li,'p(note) => Agrega una nota al proyecto')
-
-    content_tag(:ul, list_elements, :id => "textileGuide")
+    TEXTILE_GUIDE.display
   end
   
   def saved_timestamp(article)

@@ -365,3 +365,32 @@ table.category td {
 .clear {
   clear: both;
 }
+
+table#textile_guide {
+  border:2px solid #999;
+  width:100%;
+  table-layout:fixed;
+}
+
+table#textile_guide th {
+  color: #4d4d4d;
+  background-color: #ECE3D2;
+  font-weight: bold;
+  border: #fff solid 1px;
+  padding:5px;
+  text-align:center;
+}
+
+table#textile_guide td {
+  width:50%;
+  padding:0 10px 0 20px;
+  border: 1px solid #CCC;
+}
+
+table#textile_guide ul {
+  margin-bottom:0;
+}
+
+table#textile_guide p.note {
+  width:60px;
+}
