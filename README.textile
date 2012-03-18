@@ -1,9 +1,6 @@
 h1. Wiki de Innku
 
-El "wiki de Innku":http://wiki.innku.com es el lugar donde nuestro equipo de trabajo comparte su conocimiento técnico. El mismo sirve
-de apoyo tanto para ayudar al equipo de trabajo en Innku como a la comunidad de Ruby. En el wiki se pueden
-conseguir desde bugs, problemas con actualizaciones hasta soluciones interesantes que 
-aporten un grano de arena en la comunidad. 
+El "wiki de Innku":http://wiki.innku.com es el lugar donde nuestro equipo de trabajo comparte su conocimiento técnico. El mismo sirve de apoyo tanto para ayudar al equipo de trabajo en Innku como a la comunidad de Ruby. En el wiki se pueden conseguir desde bugs, problemas con actualizaciones hasta soluciones interesantes que aporten un grano de arena en la comunidad. 
 
 h2. ¿Qué se puede encontrar en el Wiki?
 
@@ -13,13 +10,10 @@ Quisieramos ayudar en otras comunidades, pero sentimos que tenemos que restringi
 
 h2. ¿Por qué hacerlo OpenSource?
 
-El Wiki de innku es una aplicación pequeña escrita en Ruby on Rails con buenas prácticas. Es dificil publicar el código en una aplicación en producción
-por los riesgos de la seguridad. Sin embargo, sentimos que hay un vacío en la comunidad de Ruby de aplicaciones hechas en Ruby on Rails. Hay muchas gemas
-pero no hay casi aplicaciones.
+El Wiki de innku es una aplicación pequeña escrita en Ruby on Rails con buenas prácticas. Es dificil publicar el código en una aplicación en producción por los riesgos de la seguridad. Sin embargo, sentimos que hay un vacío en la comunidad de Ruby de aplicaciones hechas en Ruby on Rails. Hay muchas gemas pero no hay casi aplicaciones.
 
 Trataremos de ejemplificar varios de los artículos en el Wiki, con código en producción de este repositorio.
 
 h2. Si quieres aportar, eres bienvenido.
 
-Este proyecto comenzó como entrenamiento para algunos desarrolladores en Innku. Ahora hay varios programadores que lo mantienen en su tiempo libre. Si quieres
-aportar con un pull request, eres más que bienvenido.
+Este proyecto comenzó como entrenamiento para algunos desarrolladores en Innku. Ahora hay varios programadores que lo mantienen en su tiempo libre. Si quieres aportar con un pull request, eres más que bienvenido.
