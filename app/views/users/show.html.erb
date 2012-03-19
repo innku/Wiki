@@ -7,4 +7,4 @@
 <br />
 <%= link_to t(:edit_password), 'users/edit' %>
 
-<%= render :partial => "user_articles"  %>
+<%= render :partial => "articles", :locals => {:articles => @articles}  %>

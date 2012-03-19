@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   end
   
   def show
+    @articles = Article.drafts
   end
   
   def update
