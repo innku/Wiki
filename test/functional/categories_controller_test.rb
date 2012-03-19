@@ -4,8 +4,8 @@ class CategoriesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    sign_in users(:one)
-    @category = categories(:one)
+    sign_in FactoryGirl.create(:user)
+    @category = FactoryGirl.create(:category)
   end
 
   test "should get index" do

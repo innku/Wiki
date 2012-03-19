@@ -4,7 +4,7 @@ class UsersControllerTest < ActionController::TestCase
   include Devise::TestHelpers
   
   setup do
-    sign_in users(:one)
+    sign_in FactoryGirl.create(:user)
   end
   
   test "should get new" do

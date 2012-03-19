@@ -4,8 +4,8 @@ class ArticlesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    sign_in users(:one)
-    @article = articles(:one)
+    sign_in FactoryGirl.create(:user)
+    @article = FactoryGirl.create(:article)
   end
 
   test "should get index" do
