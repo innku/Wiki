@@ -17,6 +17,8 @@ group :development do
 end
 
 group :test do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
   gem 'redgreen'
   gem 'test-unit', '1.2.3'
 end
