@@ -174,5 +174,6 @@ es:
       default: "%a, %d %b %Y %H:%M:%S"
       short: "%d %b %H:%M"
       long: "%d de %B, %Y %H:%M"
+      summary: "%d de %b, %Y"
     am: "am"
     pm: "pm"

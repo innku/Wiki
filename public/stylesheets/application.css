@@ -40,6 +40,9 @@ body{text-align:left;}#ft{clear:both;}#doc,#doc2,#doc3,#doc4,.yui-t1,.yui-t2,.yu
 .yui-t3 #yui-main .yui-b {
   margin-left:0px;
 }
+#yui-main span {
+  color: #AAA;
+}
 
 a {
   font-family: helvetica neue, helvetica;
