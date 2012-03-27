@@ -1,7 +1,7 @@
 <div class="header">
   <h1 class="title"><%= @article.name %></h1>
   <span id="created_at">
-    Actualizado el <%= l @article.created_at, :format => :summary %>
+    Creado el <%= l @article.created_at, :format => :summary %>
   </span>
   <div class="description">
     <%= redcloth(@article.description) %>

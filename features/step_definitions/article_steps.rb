@@ -21,6 +21,6 @@ Given /^I see the info for the article$/ do
   page.should have_content("IE hate")
   page.should have_content("Las cosas que detestamos de IE")
   page.should have_content("Falta de convenciones")
-  page.should have_content("Actualizado el 27 de Mar, 2012")
+  page.should have_content("Creado el 27 de Mar, 2012")
   Timecop.return
 end
