@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.order("hit_count DESC").limit(3)
+    @recent_articles  = Article.most_recent(3)
   end
-
 end

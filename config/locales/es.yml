@@ -51,7 +51,7 @@ es:
       create_article:     "Creas un Artículo"
       search_article:     "Busca un artículo"
       welcome2:           "si tienes algun problema y no sabes como solucionarlo"
-      featured_articles:   "Artículos Destacados"
+      recent_articles:    "Artículos Recientes"
 
   devise:
     sessions:

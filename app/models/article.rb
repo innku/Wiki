@@ -8,10 +8,14 @@ class Article < ActiveRecord::Base
   validates  :name, :user, :presence => true
   validates  :content, :description, :category, :presence => { :if => :published? }
   
-  scope :published, where({:published => true})
-  scope :drafts, where({:published => false})
-  default_scope order("updated_at DESC")
-  
+  scope :published,     where({:published => true})
+  scope :drafts,        where({:published => false}).order("updated_at DESC")
+  scope :by_popularity,  order("hit_count DESC") # Not used right now
+
+  def self.most_recent(qty)
+    order("created_at DESC").limit(qty)
+  end
+
   def increase_count!
     self.hit_count += 1
     self.save!
