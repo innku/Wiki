@@ -1,4 +1,4 @@
-Feature: Article Profile page
+Feature: Article page
 
   As a Visitor
   I can see the article detail
