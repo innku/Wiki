@@ -24,4 +24,14 @@ module ApplicationHelper
     css_class = current_page?(path) ? "active" : ""
     link_to title, path, :class => css_class
   end
+
+  # The reason we added this here instead of sorting in the model,
+  # its because adding a scope, I believe would have made an active
+  # record query.
+  #
+  # If we added an scope, all the queries we avoided by making the include
+  # call explicit in the application controller, would have been made.
+  def get_and_sort_articles(category)
+    category.published.sort_by(&:name)
+  end
 end

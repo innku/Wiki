@@ -10,7 +10,7 @@
   <% @categories.each do |category| %>
     <h1><%= category.name %></h1>
     <ul>
-      <% category.published.each do |article| %>
+      <% get_and_sort_articles(category).each do |article| %>
         <li><%= active_tab article.name, article_path(article) %></li>
       <% end %>
     </ul>
