@@ -19,6 +19,7 @@
   <%= redcloth(coderay(@article.content).html_safe) %>
 </div>
 
+<%= render :partial => 'articles/disqus' %>
 
 <% unless params[:lightbox] %>
   <% if can? :modify, @article %>
