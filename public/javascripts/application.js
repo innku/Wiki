@@ -67,6 +67,7 @@ $(function(){
 		'type'			: 'iframe',
 		'onStart'   : update_article()
 	});
+
 });
 
 function save_article(){
@@ -94,4 +95,18 @@ function update_article(){
   if (form.html() !== null) {
     $.post(form.attr("action"), form.serialize(), null, "script");
   }
+}
+
+// Triggers a notification to the author when a comment is created
+function disqus_config() {
+  this.callbacks.onNewComment = [function() {
+    var article_id = $("#article_id").text();
+    $.get( create_notification_url(article_id), 
+           function(data) {}, 
+           'json');
+  }];
+}
+
+function create_notification_url(article_id) {
+  return "/articles/" +  article_id + "/notifications/deliver";
 }

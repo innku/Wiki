@@ -4,7 +4,12 @@ Wiki::Application.routes.draw do
 
   devise_for :users
   resources :categories
-  resources :articles
+  resources :articles do
+    resources :notifications do
+      get 'deliver', :on => :collection
+    end
+  end
+
   resources :home
   resources :users
   

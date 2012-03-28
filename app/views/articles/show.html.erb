@@ -21,9 +21,12 @@
 
 <%= render :partial => 'articles/disqus' %>
 
+<span style="display:none" id="article_id"><%= @article.id %></span>
 <% unless params[:lightbox] %>
   <% if can? :modify, @article %>
-    <%= link_to t(:edit), edit_article_path(@article) %> |
-    <%= link_to t(:destroy), article_path(@article), :method => :delete, :confirm => t(:sure) %>
+    <div id="article_actions">
+      <%= link_to t(:edit), edit_article_path(@article), :class => "button" %> |
+      <%= link_to t(:destroy), article_path(@article), :method => :delete, :confirm => t(:sure), :class => "button" %>
+    </div>
   <% end %>
 <% end %>

@@ -30,7 +30,7 @@
 
     <% if can_suscribe?(f.object, current_user) %>
       <div class="field">
-        <%= check_box_tag "article[author_suscribed]" %>
+        <%= f.check_box :author_suscribed %>
         <%= f.label :author_suscribed %>
       </div>
     <% end %>

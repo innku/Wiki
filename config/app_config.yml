@@ -1,0 +1,11 @@
+development:
+  disqus: 
+
+test:
+  disqus: 
+
+staging:
+  disqus: "innkuwiki-staging"
+
+production:
+  disqus: "innkuwiki"

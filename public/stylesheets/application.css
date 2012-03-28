@@ -401,3 +401,11 @@ table#textile_guide ul {
 table#textile_guide p.note {
   width:60px;
 }
+
+#disqus_thread ul > li {
+  list-style-image: none;
+}
+#article_actions {
+  margin-top:15px;
+}
+

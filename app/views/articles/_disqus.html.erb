@@ -1,7 +1,7 @@
-<% if Rails.env.production? %>
+<% if APP_CONFIG[:disqus] %>
   <div id="disqus_thread"></div>
   <script type="text/javascript">
-      var disqus_shortname = 'innkuwiki';
+    var disqus_shortname = "<%= APP_CONFIG[:disqus] %>";
 
       (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -13,11 +13,7 @@
   <noscript>
     Please enable JavaScript to view the 
     <a href="http://disqus.com/?ref_noscript">
-      comments powered by Disqus.
+      comentarios de blog traido por <span class="logo-disqus">Disqus</span>
     </a>
   </noscript>
-
-  <a href="http://disqus.com" class="dsq-brlink">
-    comentarios de blog traido por <span class="logo-disqus">Disqus</span>
-  </a>
 <% end %>
