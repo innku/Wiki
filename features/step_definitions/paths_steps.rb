@@ -9,3 +9,7 @@ end
 Given /^I am on the article page$/ do
   visit article_path(@article)
 end
+
+Given /^I am on the new article page$/ do
+  visit new_article_path
+end
