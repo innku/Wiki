@@ -149,7 +149,8 @@ input[type=text], input[type=password], textarea { background: #fff; border: 1px
 form {width: 100%;}
 form .field {padding: 0 18px 0 0; margin: 9px 0;}
 form label {font-size: 14px; font-weight: bold; margin: 6px 9px 6px 0; display: block; float: left;}
-form .box input {width: 200px;}
+form label[for="article_author_suscribed"] { float:none; display:inline;}
+form .box input[type="text"] {width: 200px;}
 
 h1.form {float: left;}
 div#saved {

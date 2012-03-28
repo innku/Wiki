@@ -35,4 +35,7 @@ module ArticlesHelper
     link_to t(:preview), link_path, options
   end
   
+  def can_suscribe?(article, user)
+    article.new_record? || article.user == user
+  end
 end

@@ -35,3 +35,16 @@ end
 Given /^the article should have been created$/ do
   page.should have_content("El artículo fue creado exitosamente")
 end
+
+Given /^I have created an article$/ do
+  @article = FactoryGirl.create(:article, :user => @current_user)
+end
+
+Then /^I try to suscribe to the article comments$/ do
+  check :article_author_suscribed
+  click_button "Guardar Borrador"
+end
+
+Given /^the article should have been updated$/ do
+  page.should have_content("El artículo fue modificado exitosamente")
+end

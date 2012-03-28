@@ -118,6 +118,7 @@ es:
         content:          "Contenido"
         category:         "Categoría"
         this:             "este"
+        author_suscribed: "¿Deseas suscribirte a los comentarios?"
       user:
         email:                  "Correo Electrónico"
         this:                   "este"

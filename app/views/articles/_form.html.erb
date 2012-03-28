@@ -27,7 +27,14 @@
       <%= f.label :category %>
       <%= f.select :category_id, Category.all.collect{|c| [c.name, c.id] }, :include_blank => true %>
     </div>
-    
+
+    <% if can_suscribe?(f.object, current_user) %>
+      <div class="field">
+        <%= check_box_tag "article[author_suscribed]" %>
+        <%= f.label :author_suscribed %>
+      </div>
+    <% end %>
+
     <div class="field">
       <%= label_tag :tag %>
       <%= text_field_tag :tag %>

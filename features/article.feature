@@ -3,11 +3,9 @@ Feature: Article page
   As a Visitor
   I can see the article detail
 
-  Background:
-    Given the date is freezed
-
   Scenario: I can create an article
-    Given a category exists
+    Given the date is freezed
+    And a category exists
     And I am logged in as user "elias@innku.com"
     And I am on the new article page
     And I fill the article form
@@ -17,3 +15,11 @@ Feature: Article page
     Given an article exists
     And I am on the article page
     Then I see the info for the article
+
+  @javascript
+  Scenario: The author can suscribe to an article comment
+    Given I am logged in as user "elias@innku.com"
+    And I have created an article
+    And I am on the edit article page for that article
+    And I try to suscribe to the article comments
+    Then the article should have been updated
