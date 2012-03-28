@@ -2,15 +2,15 @@
   <%= render "/layouts/error_messages", :target => @article %>
 
   <div class="field">
-    <%= f.label t(:name) %><br />
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label t(:description) %><br />
+    <%= f.label :description %><br />
     <%= f.text_area :description, :rows => 4 %>
   </div>
   <div class="field">
-    <%= f.label t(:content) %>
+    <%= f.label :content %>
 	  <%= link_to t('.style_guide'), "#", :id => "toggle", :class => "smallbutton" %>
 	  
 	  <%= link_to_preview(@article) %>
@@ -24,7 +24,7 @@
 
   <div class="box">
     <div class="field">
-      <%= f.label t(:category) %>
+      <%= f.label :category %>
       <%= f.select :category_id, Category.all.collect{|c| [c.name, c.id] }, :include_blank => true %>
     </div>
     
