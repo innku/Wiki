@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-
   load_and_authorize_resource
+  before_filter :warn_if_article_published, :only => [:edit]
 
   def index
     @articles = Article.search(params[:q])
@@ -49,5 +49,11 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     redirect_to(@article, :notice => I18n.t("notice.article.deleted_successfully"))
+  end
+
+  private
+
+  def warn_if_article_published
+    flash[:alert] = I18n.t("alert.article.warn_about_published_article_edit") if @article.published
   end
 end

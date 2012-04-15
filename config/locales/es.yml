@@ -31,6 +31,9 @@ es:
       updated_successfully: "El cambio de contraseña fue cambiado exitosamente."
   confirm:
     confirm_delete:         "¿Estás seguro que deseas eliminar el artículo?"
+  alert:
+    article:
+      warn_about_published_article_edit: "Estas editando un artículo publicado. Automáticamente se saca de publicación para que puedas editar el artículo. Asegurate de pulsar 'Publicar' cuando finalices la edición, si deseas que permanezca público el artículo."
 
   layouts:
     application:
