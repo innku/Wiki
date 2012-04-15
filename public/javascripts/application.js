@@ -22,9 +22,9 @@ $(function(){
 
   $('a#toggle').click(function() {
     $('#togglebox').toggle(400);
+    toggle_message($(this));
     return false;
   });
-  
   
   $("#article_name, #article_description, #article_content").blur(function(){
 	  if ($(this).val().length != 0){
@@ -115,4 +115,15 @@ function disqus_config() {
 
 function create_notification_url(article_id) {
   return "/articles/" +  article_id + "/notifications/deliver";
+}
+
+function toggle_message(select) {
+  open_message  = "Mostrar guía de estilos";
+  close_message = "Ocultar guía de estilos";
+
+  if (select.text() == open_message) {
+    select.text(close_message);
+  } else {
+    select.text(open_message);
+  }
 }
