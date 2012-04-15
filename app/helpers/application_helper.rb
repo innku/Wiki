@@ -34,4 +34,8 @@ module ApplicationHelper
   def get_and_sort_articles(category)
     category.articles.sort_by(&:name)
   end
+  
+  def published_categories
+    Category.with_published_articles
+  end
 end

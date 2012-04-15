@@ -7,7 +7,7 @@
 <div class="clear"></div>
 
 <div id="menu">
-  <% @categories.each do |category| %>
+  <% published_categories.each do |category| %>
     <h1><%= link_to category.name , "#" %></h1>
 
     <%# --- Be warned!! I used javascript to hide this categories.. --- %>
