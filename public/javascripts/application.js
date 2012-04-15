@@ -73,6 +73,7 @@ $(function(){
 
   $("#menu h1 a").click(function() {
     $(this).parent().next().slideToggle();
+    return false;
   });
 });
 
