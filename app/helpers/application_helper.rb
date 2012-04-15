@@ -32,6 +32,6 @@ module ApplicationHelper
   # If we added an scope, all the queries we avoided by making the include
   # call explicit in the application controller, would have been made.
   def get_and_sort_articles(category)
-    category.published.sort_by(&:name)
+    category.articles.sort_by(&:name)
   end
 end
