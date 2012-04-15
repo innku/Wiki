@@ -395,7 +395,7 @@ table#textile_guide td {
   border: 1px solid #CCC;
 }
 
-table#textile_guide ul {
+table#textile_guide ul, table#textile_guide ol {
   margin-bottom:0;
 }
 
