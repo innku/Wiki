@@ -8,7 +8,10 @@
 
 <div id="menu">
   <% @categories.each do |category| %>
-    <h1><%= category.name %></h1>
+    <h1><%= link_to category.name , "#" %></h1>
+
+    <%# --- Be warned!! I used javascript to hide this categories.. --- %>
+
     <ul>
       <% get_and_sort_articles(category).each do |article| %>
         <li><%= active_tab article.name, article_path(article) %></li>

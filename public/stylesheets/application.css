@@ -99,7 +99,7 @@ a {
   font-weight:bold;
 }
 
-#menu h1{
+#menu h1 a{
   font-size: 16px;
   color: #4F8D37;
   font-weight: bold;
@@ -115,7 +115,8 @@ a {
   
 }
 
-#menu a:hover{color: #666666;}
+#menu h1 a:hover{ color: #4F8D37 }
+#menu a:hover{color: #666666 }
 #menu ul {padding: 0;}
 #menu li{margin-bottom: 10px;margin-left: 10px; list-style: none; padding: 0;}
 

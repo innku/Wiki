@@ -68,6 +68,12 @@ $(function(){
 		'onStart'   : update_article()
 	});
 
+  $("#menu ul").hide();
+  $("#menu ul li a.active").parents("ul").show();
+
+  $("#menu h1 a").click(function() {
+    $(this).parent().next().slideToggle();
+  });
 });
 
 function save_article(){
