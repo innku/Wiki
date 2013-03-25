@@ -17,16 +17,17 @@ body{text-align:left;}#ft{clear:both;}#doc,#doc2,#doc3,#doc4,.yui-t1,.yui-t2,.yu
   background-color: #EEE;
   padding-top: 20px;
 }
+
 .yui-b{
   padding: 0px;
 }
 .yui-t3 #yui-s {
-  width:24%;
+  width:20%;
   padding-left: 35px;
 }
 
 #bd #yui-main {
-  width: 63%;
+  width: 70%;
   margin-right:45px;
   background-color: white;
   margin-left:0px;
@@ -58,19 +59,14 @@ a {
   color: #794B14;
 }
 
-#menu{
-  margin-top: 15px;
-}
-
 #search{
   /*height: 50px;*/
 }
 
 #search input[type=text]{
   border: 1px solid #cdcdcd;
-  width:75%;
-  font-size: 18px;
-  float:left;
+  width:95%;
+  font-size: 16px;
 }
 
 #search input[type=submit]{
@@ -99,10 +95,51 @@ a {
   font-weight:bold;
 }
 
+#menu{
+  margin-top: 15px;
+}
+
+#menu .filter {
+  margin-bottom:5px;
+}
+
+#menu .filter .filter-group {
+  color: #6a6a6a;
+  background: #fafafa url(/images/right_arrow.png) no-repeat 2px center;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#menu .filter .filter-group:hover {
+  box-shadow: 0px 0px 1px #aaa;
+  -moz-box-shadow: 0px 0px 1px #aaa;
+  -webkit-box-shadow: 0px 0px 1px #aaa;
+  background-color: #fcfcfc;
+}
+
+#menu .filter .filter-group.is-active {
+  background: #fafafa url(/images/down_arrow.png) no-repeat 2px center;
+  border: 1px solid #cdcdcd;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#menu h1 {
+  margin: 0;
+  padding: 5px 20px;
+  background: white;
+}
+
 #menu h1 a{
+  border: 1px solid 
   font-size: 16px;
   color: #4F8D37;
-  font-weight: bold;
+  font-weight: normal;
   margin-bottom: 10px;
   margin-top: 5px;
 }
@@ -112,13 +149,22 @@ a {
   font-size: 14px;
   color: #999999;
   text-decoration: none;
-  
 }
 
 #menu h1 a:hover{ color: #4F8D37 }
 #menu a:hover{color: #666666 }
-#menu ul {padding: 0;}
-#menu li{margin-bottom: 10px;margin-left: 10px; list-style: none; padding: 0;}
+#menu ul {
+  margin:0;
+  padding: 0;
+  background: white;
+  border: 1px solid #cdcdcd;
+  border-top: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+#menu li{padding: 5px 20px; list-style: none;}
 
 h1, h2, h3, h4, h5, h6, h7 {color: #4F8D37;}
 
@@ -362,8 +408,8 @@ table.category td {
   margin:1px 0 0 4px; /* Because of float */
   padding:0;
   background:url(/images/search.png) #369C9E no-repeat center;
-  height:34px;
-  width:34px;
+  height:28px;
+  width:28px;
 }
 
 .clear {

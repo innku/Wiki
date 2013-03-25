@@ -1,21 +1,22 @@
-<div id="search">
+<div id="search" style='position:relative'>
   <%= form_tag(articles_path, :method => 'get') do %>
-    <%= text_field_tag :q, nil %>
-    <%= submit_tag "", :class => "search" %>
+    <%= text_field_tag :q, nil, placeholder: 'Buscar...' %>
+    <%= submit_tag "", :class => "search", style: 'position:absolute; top:1px;right:2px;'  %>
   <% end %>
 </div>
-<div class="clear"></div>
 
 <div id="menu">
   <% published_categories.each do |category| %>
-    <h1><%= link_to category.name , "#" %></h1>
+    <div class='filter'>
+      <h1 class='filter-group'><%= category.name %></h1>
 
-    <%# --- Be warned!! I used javascript to hide this categories.. --- %>
+      <%# --- Be warned!! I used javascript to hide this categories.. --- %>
 
-    <ul>
-      <% get_and_sort_articles(category).each do |article| %>
-        <li><%= active_tab article.name, article_path(article) %></li>
-      <% end %>
-    </ul>
+      <ul>
+        <% get_and_sort_articles(category).each do |article| %>
+          <li><%= active_tab article.name, article_path(article) %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
 </div>

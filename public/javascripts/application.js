@@ -68,11 +68,14 @@ $(function(){
 		'onStart'   : update_article()
 	});
 
-  $("#menu ul").hide();
-  $("#menu ul li a.active").parents("ul").show();
-
-  $("#menu h1 a").click(function() {
-    $(this).parent().next().slideToggle();
+  $(".filter ul").hide();
+  $(".filter ul li a.active").each(function(){
+    $(this).parents("ul").show();
+    $(this).parents('ul').prev().addClass('is-active');
+  });
+  $(".filter > h1").click(function() {
+    $(this).next().slideToggle();
+    $(this).toggleClass('is-active');
     return false;
   });
 });
