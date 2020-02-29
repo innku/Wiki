@@ -13,7 +13,7 @@ gem 'hoe', '~> 1.5.1' # Heroku's rubygems is too old for hoe 2.9.1 as of 28 Mar 
 
 group :development, :test do
   gem 'rspec-rails' # Needs to be in development because of generators.
-  gem 'rake', '0.8.7'
+  gem 'rake', '12.3.3'
 end
 
 group :development do
