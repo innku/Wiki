@@ -84,7 +84,7 @@ GEM
       rake (>= 0.8.1)
       rubyforge (>= 1.0.0)
     i18n (0.6.0)
-    json (1.6.5)
+    json (2.3.1)
     json_pure (1.6.5)
     livereload (1.6.1)
       em-dir-watcher (>= 0.1)
